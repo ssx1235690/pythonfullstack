@@ -7,12 +7,11 @@
 import threading,time,sys
 
 class Account:
-    def __init__(self,money,name,r):
+    def __init__(self,money,name):
         self.blance = money
         self.name = name
 
     def withdraw(self,num):
-        se
         self.blance -= num
     def repay(self,num):
         self.blance += num
@@ -32,3 +31,20 @@ a2 = Account(1000,'xiang')
 caozuo(a1,a2,500)
 print(a1.blance)
 print(a2.blance)
+
+
+
+# import threading,time
+class myThread(threading.Thread):
+    def run(self):
+        if semaphore.acquire():
+            print(self.name)
+            time.sleep(1)
+            semaphore.release()
+if __name__=="__main__":
+    semaphore=threading.BoundedSemaphore(20)
+    thrs=[]
+    for i in range(100):
+        thrs.append(myThread())
+    for t in thrs:
+        t.start()

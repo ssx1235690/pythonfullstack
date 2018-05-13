@@ -54,6 +54,7 @@ class myThread(threading.Thread):
         print(self.name,"gotlockss",time.ctime())
         lock.release()
         lock.release()
+        time.sleep(0.01)
 
     def doB(self):
         lock.acquire()
