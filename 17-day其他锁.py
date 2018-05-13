@@ -6,7 +6,7 @@
 
 
 
-####### 死锁
+####### 死锁和递归锁
 
 import threading,time
 
