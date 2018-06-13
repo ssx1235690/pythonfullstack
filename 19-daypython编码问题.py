@@ -3,7 +3,7 @@
 # __Author__ = songxy
 # date : 2018/6/4
 #
-
+from PIL  import  Image
 # http://www.cnblogs.com/yuanchenqi/articles/5938733.html
 
 
