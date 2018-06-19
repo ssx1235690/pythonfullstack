@@ -19,6 +19,7 @@ def consumer(name):
     while True:
         new_baozi = yield
         print("[%s] is eating baozi %s" % (name, new_baozi))
+        # pass
         # time.sleep(1)
 
 
@@ -28,12 +29,17 @@ def producer():
     n = 0
     while n < 5:
         n += 1
+        print("\033[32;1m[producer1]\033[0m is making baozi %s" % n)
         con.send(n)
+        print("\033[32;1m[producer2]\033[0m is making baozi %s" % n)
         con2.send(n)
-        print("\033[32;1m[producer]\033[0m is making baozi %s" % n)
+
 
 
 if __name__ == '__main__':
     con = consumer("c1")
     con2 = consumer("c2")
     p = producer()
+
+
+
