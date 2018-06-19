@@ -35,20 +35,47 @@
 
 ############################ Pipe 模式##########################################
 
-from multiprocessing import Process,Pipe
+# from multiprocessing import Process,Pipe
+#
+#
+# def f(conn):
+#     conn.send([42, None, 'hello'])
+#     conn.close()
+#
+#
+# if __name__ == '__main__':
+#     parent_conn,child_conn = Pipe()
+#     print(child_conn)
+#     p = Process(target=f, args=(child_conn,))
+#     p.start()
+#     print(parent_conn.recv())  # prints "[42, None, 'hello']"
+#     p.join()
 
 
-def f(conn):
-    conn.send([42, None, 'hello'])
-    conn.close()
 
+############################### Manager ############################################
+from multiprocessing import Process, Manager
+
+def f(d, l,n):
+    d[n] = '1'
+    d['2'] = 2
+    d[0.25] = None
+    l.append(n)
+    print('sub',id(d))
+    print(l)
 
 if __name__ == '__main__':
-    parent_conn,child_conn = Pipe()
-    print(child_conn)
-    p = Process(target=f, args=(child_conn,))
-    p.start()
-    print(parent_conn.recv())  # prints "[42, None, 'hello']"
-    p.join()
+    with Manager() as manager:
+        d = manager.dict()
+        print('main',id(d))
+        l = manager.list(range(5))
+        p_list = []
+        for i in range(10):
+            p = Process(target=f, args=(d, l,i))
+            p.start()
+            p_list.append(p)
+        for res in p_list:
+            res.join()
 
-
+        print(d)
+        print(l)
