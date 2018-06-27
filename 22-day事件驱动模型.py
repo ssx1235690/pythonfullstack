@@ -6,6 +6,7 @@
 # @File    : 22-day事件驱动模型.py
 # @Software: PyCharm
 
+from PIL import Image
 # http://www.cnblogs.com/yuanchenqi/articles/5722574.html
 
 # 1
@@ -105,3 +106,6 @@
 # Model的区别就是在两个阶段上各有不同的情况。
 #
 ######################### 2   blocking  IO （阻塞IO） ####################################
+
+im = Image.open(u"C:\Users\ronglian\pythonfullstack\picture\blockingIO.png")
+im.show()
