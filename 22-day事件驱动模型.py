@@ -107,5 +107,35 @@ from PIL import Image
 #
 ######################### 2   blocking  IO （阻塞IO） ####################################
 
-im = Image.open(u"C:\Users\ronglian\pythonfullstack\picture\blockingIO.png")
+im = Image.open(r"C:\Users\ronglian\pythonfullstack\picture\blockingIO.png")
+im.show()
+# 当用户进程调用了recvfrom这个系统调用，kernel就开始了IO的第一个阶段：准备数据。对于network io来说，
+# 很多时候数据在一开始还没有到达（比如，还没有收到一个完整的UDP包），这个时候kernel就要等待足够的数据到来。
+# 而在用户进程这边，整个进程会被阻塞。当kernel一直等到数据准备好了，它就会将数据从kernel中拷贝到用户内存，
+# 然后kernel返回结果，用户进程才解除block的状态，重新运行起来。
+# 所以，blocking IO的特点就是在IO执行的两个阶段都被block了。
+
+##################### 3. noblocking IO #################################################
+im = Image.open(r"C:\Users\ronglian\pythonfullstack\picture\noblockingIO.png")
+im.show()
+
+# 从图中可以看出，当用户进程发出read操作时，如果kernel中的数据还没有准备好，那么它并不会block用户进程，而是立刻返回一个error。
+# 从用户进程角度讲 ，它发起一个read操作后，并不需要等待，而是马上就得到了一个结果。用户进程判断结果是一个error时，
+# 它就知道数据还没有准备好，于是它可以再次发送read操作。一旦kernel中的数据准备好了，并且又再次收到了用户进程的system call，
+# 那么它马上就将数据拷贝到了用户内存，然后返回。
+# 所以，用户进程其实是需要不断的主动询问kernel数据好了没有。
+#  注意：
+#  在网络IO时候，非阻塞IO也会进行recvform系统调用，检查数据是否准备好，与阻塞IO不一样，”非阻塞将大的整片时间的阻塞分成N多的小的阻塞,
+# 所以进程不断地有机会 ‘被’ CPU光顾”。即每次recvform系统调用之间，cpu的权限还在进程手中，这段时间是可以做其他事情的，
+#  也就是说非阻塞的recvform系统调用调用之后，进程并没有被阻塞，内核马上返回给进程，如果数据还没准备好，此时会返回一个error。
+# 进程在返回之后，可以干点别的事情，然后再发起recvform系统调用。重复上面的过程，循环往复的进行recvform系统调用。这个过程通常被称之为轮询。
+# 轮询检查内核数据，直到数据准备好，再拷贝数据到进程，进行数据处理。需要注意，拷贝数据整个过程，进程仍然是属于阻塞的状态。
+
+#################### IO 多路复用 ########################################
+
+# IO multiplexing这个词可能有点陌生，但是如果我说select，epoll，大概就都能明白了。有些地方也称这种IO方式为event  driven IO。
+# 我们都知道，select / epoll的好处就在于单个process就可以同时处理多个网络连接的IO。
+# 它的基本原理就是select / epoll这个function会不断的轮询所负责的所有socket，当某个socket有数据到达了，就通知用户进程。它的流程如图：
+
+im = Image.open(r"C:\Users\ronglian\pythonfullstack\picture\multiplexingIO.png")
 im.show()
