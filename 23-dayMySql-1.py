@@ -18,6 +18,8 @@ import  pymysql
 # MySql3
 # http://www.cnblogs.com/wupeiqi/articles/5729934.html
 
+# mysql 练习题
+# http://www.cnblogs.com/wupeiqi/articles/5748496.html
 
 MysqlHost = "192.168.33.100"
 
