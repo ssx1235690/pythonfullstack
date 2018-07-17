@@ -14,7 +14,7 @@ logging.warning('this is warning message')
 logging.error('this is error message')
 logging.critical('this is critical message')
 
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s', datefmt='%Y/%m/%d %H:%M:%S', filename='myapp.log', filemode='w')
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s', datefmt='%Y/%m/%d %H:%M:%S', filename=r'c:\user\ronglian\desktop\myapp.log', filemode='w')
 
 logger = logging.getLogger(__name__)
 logging.debug('this is debug message')

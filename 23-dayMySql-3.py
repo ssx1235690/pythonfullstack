@@ -9,7 +9,7 @@
 
 import  pymysql
 import logging
-
+logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',datefmt='%Y/%m/%d %H:%M:%S',filename=r'c:\users\ronglian\desktop\mylog.txt', filemode='a')
 
 conn = pymysql.connect(host="localhost",user="root",password="",db="song",charset='utf8')
 cursor = conn.cursor()
@@ -19,8 +19,8 @@ song = cursor.fetchall()
 print(song)
 print(type(song))
 try:
-    cursor.execute('insert into teaches (tid,tname) VALUE (6,"宋逍遥老师")')
+    cursor.execute('insert into teacher (tid,tname) VALUE (6,"宋逍遥老师")')
     cursor.commit()
 except Exception as song:
-
-conn.close()
+    logging.info(song)
+    conn.close()
