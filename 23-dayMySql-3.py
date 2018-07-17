@@ -6,6 +6,8 @@
 # @File    : 23-dayMySql-3.py
 # @Software: PyCharm
 
+# http://www.cnblogs.com/wupeiqi/articles/5713330.html
+
 
 import  pymysql
 import logging
@@ -20,7 +22,9 @@ print(song)
 print(type(song))
 try:
     cursor.execute('insert into teacher (tid,tname) VALUE (6,"宋逍遥老师")')
-    cursor.commit()
+    conn.commit()
 except Exception as song:
     logging.info(song)
     conn.close()
+
+
