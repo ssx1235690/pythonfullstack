@@ -3,7 +3,7 @@
 # @Time    : 2018/7/17 15:11
 # @Author  : sxsong
 # @Site    : 
-# @File    : 23-dayMySql-3.py
+# @File    : 23-dayMySql-3pymysql的操作流程.py
 # @Software: PyCharm
 
 

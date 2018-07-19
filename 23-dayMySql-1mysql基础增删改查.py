@@ -3,7 +3,7 @@
 # @Time    : 2018/7/12 15:56
 # @Author  : sxsong
 # @Site    : 
-# @File    : 23-dayMySql-1.py
+# @File    : 23-dayMySql-1mysql基础增删改查.py
 # @Software: PyCharm
 
 import  pymysql
@@ -12,8 +12,7 @@ import  pymysql
 
 # http://www.cnblogs.com/wupeiqi/articles/5713315.html
 
-# MySql2
-# http://www.cnblogs.com/wupeiqi/articles/5713323.html
+
 
 # MySql3
 # http://www.cnblogs.com/wupeiqi/articles/5729934.html

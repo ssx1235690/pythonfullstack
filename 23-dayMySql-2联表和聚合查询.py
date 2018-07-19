@@ -3,7 +3,7 @@
 # @Time    : 2018/7/16 11:17
 # @Author  : sxsong
 # @Site    : 
-# @File    : 23-dayMySql-2.py
+# @File    : 23-dayMySql-2联表和聚合查询.py
 # @Software: PyCharm
 
 
