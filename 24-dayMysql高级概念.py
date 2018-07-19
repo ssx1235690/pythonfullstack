@@ -56,3 +56,62 @@
 #
 #
 # select * from v1
+
+
+
+######################################存储过程######################################################
+# 存储过程是一个SQL语句集合，当主动去调用存储过程时，其中内部的SQL语句会按照逻辑执行。
+#
+# 1、创建存储过程
+#
+#
+# 复制代码
+# -- 创建存储过程
+#
+# delimiter //
+# create procedure p1()
+# BEGIN
+#     select * from t1;
+# END//
+# delimiter ;
+#
+#
+#
+# -- 执行存储过程
+#
+# call p1()
+
+
+# 对于存储过程，可以接收参数，其参数有三类：
+#
+# in          仅用于传入参数用
+# out        仅用于返回值用
+# inout     既可以传入又可以当作返回值
+#
+# 复制代码
+# -- 创建存储过程
+# delimiter \\
+# create procedure p1(
+#     in i1 int,
+#     in i2 int,
+#     inout i3 int,
+#     out r1 int
+# )
+# BEGIN
+#     DECLARE temp1 int;
+#     DECLARE temp2 int default 0;
+#
+#     set temp1 = 1;
+#
+#     set r1 = i1 + i2 + temp1 + temp2;
+#
+#     set i3 = i3 + 100;
+#
+# end\\
+# delimiter ;
+#
+# -- 执行存储过程
+# set @t1 =4;
+# set @t2 = 0;
+# CALL p1 (1, 2 ,@t1, @t2);
+# SELECT @t1,@t2;
