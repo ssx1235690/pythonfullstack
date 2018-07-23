@@ -3,7 +3,7 @@
 # @Time    : 2018/7/19 10:52
 # @Author  : sxsong
 # @Site    : 
-# @File    : 24-dayMysql高级概念.py
+# @File    : 24-dayMysql高级概念视图和过程.py
 # @Software: PyCharm
 
 
@@ -115,3 +115,74 @@
 # set @t2 = 0;
 # CALL p1 (1, 2 ,@t1, @t2);
 # SELECT @t1,@t2;
+
+#
+# 2、删除存储过程######################################################
+#
+#
+# drop procedure proc_name;
+# 3、执行存储过程########################################################
+#
+#  执行存储过程
+#
+# 复制代码
+# #!/usr/bin/env python
+# # -*- coding:utf-8 -*-
+# import pymysql
+#
+# conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='123', db='t1')
+# cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
+# # 执行存储过程
+# cursor.callproc('p1', args=(1, 22, 3, 4))
+# # 获取执行完存储的参数
+# cursor.execute("select @_p1_0,@_p1_1,@_p1_2,@_p1_3")
+# result = cursor.fetchall()
+#
+# conn.commit()
+# cursor.close()
+# conn.close()
+#
+#
+# print(result)
+
+
+#####自己练习
+# 过程添加
+# delimiter \\
+# create procedure p1(
+#     in i1 int,
+#     in i2 int,
+#     inout i3 int,
+#     out r1 int
+# )
+# BEGIN
+#     DECLARE temp1 int;
+#     DECLARE temp2 int default 0;
+#
+#     set temp1 = 1;
+#
+#     set r1 = i1 + i2 + temp1 + temp2;
+#
+#     set i3 = i3 + 100;
+#
+# end\\
+# delimiter ;
+import pymysql
+
+conn = pymysql.connect(host="localhost",port=3306,user="root",passwd="",db="song")
+
+cursor = conn.cursor()
+cursor.execute('select * from students')
+song = cursor.fetchall()
+print(song)
+
+cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
+
+cursor.callproc('p1',args=(1,22,33,44))
+cursor.execute('select @_p1_0,@_p1_1,@_p1_2,@_p1_3')
+song =cursor.fetchall()
+print(song)
+print(song[0].values())
+conn.close()
+
+
