@@ -138,3 +138,29 @@ conn.close()
 #
 # alter table 表名 drop primary key;
 # alter table 表名  modify  列名 int, drop primary key;
+
+
+
+# 4、组合索引
+#
+# 组合索引是将n个列组合成一个索引
+#
+# 其应用场景为：频繁的同时使用n列来进行查询，如：where n1 = 'alex' and n2 = 666。
+#
+#
+# 复制代码
+# create table in3(
+#     nid int not null auto_increment primary key,
+#     name varchar(32) not null,
+#     email varchar(64) not null,
+#     extra text
+# )
+# 复制代码
+#
+# create index ix_name_email on in3(name,email);
+# 如上创建组合索引之后，查询：
+#
+# name and email  -- 使用索引
+# name                 -- 使用索引
+# email                 -- 不使用索引
+# 注意：对于同时搜索n个条件时，组合索引的性能好于多个单一索引合并。
