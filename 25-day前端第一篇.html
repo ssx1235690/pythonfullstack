@@ -10,6 +10,19 @@
     <style>
         div{
             color: red;
+            background: rebeccapurple;
+        }
+        #div1{
+            background: purple;
+            height: 200px;
+        }
+        #div2{
+            background: blueviolet;
+            height: 200px;
+        }
+        #div3{
+            background: brown;
+            height: 200px;
         }
     </style>
 </head>
@@ -26,15 +39,87 @@
 <h6>6</h6>
 <h1 style="color: yellow">乐乐妖</h1>说：乐乐爱爸爸
 <h1 style="color: blue;" >爸爸也爱乐乐</h1>
-<a href="http://www.cnblogs.com/yuanchenqi/articles/5976755.html">这是一个链接</a>
+<a href="http://www.cnblogs.com/yuanchenqi/articles/5976755.html" target="_blank">这是一个链接</a>
 <div style="color:rebeccapurple"> hello div </div>
-<image src="https://img.ugirls.tv/uploads/magazine/content/dc9ba6e59f93b878d81e178705719e3a.jpg" width="160px" heigh="540px" alt="mm" title="吓人啊"></image>
+<image src="https://img.ugirls.tv/uploads/magazine/content/dc9ba6e59f93b878d81e178705719e3a.jpg" width="360px" heigh="940px" alt="mm" title="吓人啊"></image>
+<image src="https://img.ugirls.tv/uploads/magazine/content/d79635c58f7c931e49edb1ae403aaab3_magazine_web_m.jpg" width="360px" heigh="940px" alt="mm" title="吓人啊2"></image>
 <del>删除线</del>
 
 <h2>块级标签</h2> test
 <p></p>
 
 <input>
+
+
+<div id="top1">top  a标签的两个作用 超链接和锚  注意 target属性</div>
+<a href="#div1" >第一章</a>
+<a href="#div2">第二章</a>
+<a href="#div3">第三章</a>
+
+<div id="div1">first</div>
+<a href="#top1">fanhui</a>
+<div id="div2">second</div>
+<a href="#top1">fanhui</a>
+<div id="div3">third</div>
+<a href="#top1">fanhui</a>
+
+<div>列表标签</div>
+<ul> 无序
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<ol>有序
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ol>
+
+<dl>定义列表
+    <dt>first</dt>
+    <dd>1</dd>
+    <dd>2</dd>
+    <dd>3</dd>
+    <dd>4</dd>
+</dl>
+
+<div>表格标签</div>
+<table border="1">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td colspan="2">January</td>
+  </tr>
+    <tr>
+         <td colspan="2">$100</td>
+    </tr>
+</table>
+
+
+<div> 表单标签
+</div>
+
+<form method="post" action="25-day前端第一篇.html" >
+    <p>姓名：<input type="text"></p>
+    <p>性别：<input type="text"></p>
+    <p>submit: <input type="submit" value="leleyao"></p>
+    <p>button: <input type="button" value="leleyao"></p>
+
+    <p>爱好: 篮球<input type="checkbox" ></p>
+    <p> 乒乓<input type="checkbox" ></p>
+
+    <p>gender: nan <input type="radio" name="gender"></p>
+    <p>gender: nv <input type="radio" name="gender"></p>
+
+
+    <p>给我一个图片<input type="file" ></p>
+
+</form>
+
 </body>
 </html>
 
