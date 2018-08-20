@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>protocol</title>
+    <link type="text/css" rel="stylesheet" href="26-day协议篇.html">
+</head>
+
+<body>
+<div style="background: aqua;align-content: center"><a href="http://www.cnblogs.com/yuanchenqi/articles/6000358.html" target="_blank">协议文档原文</a></div>
+<div style="background: pink;align-content: center"><a href="http://www.cnblogs.com/yuanchenqi/articles/5977825.html" target="_blank">css文档原文</a></div>
+<p>CSS是Cascading Style Sheets的简称，中文称为层叠样式表，用来控制网页数据的表现，可以使网页的表现与数据内容分离。</p>
+<h3>一 css的四种引入方式</h3>
+<p><strong>1.行内式</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;行内式是在标记的style属性中设定CSS样式。这种方式没有体现出CSS的优势，不推荐使用。</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:python;gutter:true;">&lt;p style="background-color: rebeccapurple"&gt;hello yuan&lt;/p&gt;
+</pre>
+</div>
+<p><strong>2.嵌入式</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 嵌入式是将CSS样式集中写在网页的&lt;head&gt;&lt;/head&gt;标签对的&lt;style&gt;&lt;/style&gt;标签对中。格式如下：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:python;gutter:true;">&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;style&gt;
+        p{
+            background-color: #2b99ff;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;</pre>
+</div>
+<p><strong>3 链接式</strong><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 将一个.css文件引入到HTML文件中 </p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:python;gutter:true;"> &lt;link href="mystyle.css" rel="stylesheet" type="text/css"/&gt;</pre>
+</div>
+<p><strong>4.导入式</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 将一个独立的.css文件引入HTML文件中，导入式使用CSS规则引入外部CSS文件，&lt;style&gt;标记也是写在&lt;head&gt;标记中，使用的语法如下：&nbsp; &nbsp;&nbsp;</p>
+
+</body>
+</html>
