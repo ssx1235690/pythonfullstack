@@ -33,6 +33,219 @@
 <pre class="brush:python;gutter:true;"> &lt;link href="mystyle.css" rel="stylesheet" type="text/css"/&gt;</pre>
 </div>
 <p><strong>4.导入式</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 将一个独立的.css文件引入HTML文件中，导入式使用CSS规则引入外部CSS文件，&lt;style&gt;标记也是写在&lt;head&gt;标记中，使用的语法如下：&nbsp; &nbsp;&nbsp;</p>
+<p>注意：</p>
+<p>&nbsp; &nbsp; &nbsp; 导入式会在整个网页装载完后再装载CSS文件，因此这就导致了一个问题，如果网页比较大则会儿出现先显示无样式的页面，闪烁一下之后，再出现网页的样式。这是导入式固有的一个缺陷。使用链接式时与导入式不同的是它会以网页文件主体装载前装载CSS文件，因此显示出来的网页从一开始就是带样式的效果的，它不会象导入式那样先显示无样式的网页，然后再显示有样式的网页，这是链接式的优点。</p>
+
+
+<h3>二 css的选择器（Selector）</h3>
+<p>&ldquo;选择器&rdquo;指明了{}中的&ldquo;样式&rdquo;的作用对象，也就是&ldquo;样式&rdquo;作用于网页中的哪些元素</p>
+<h4>1 基础选择器</h4>
+<a href="26-day基础选择器.html" target="_blank">26-day基础选择器.html</a>
+<div class="cnblogs_code">
+<pre>＊ ：           通用元素选择器，匹配任何元素                    *<span style="color: #000000;"> { margin:0; padding:0; }
+
+E  ：          标签选择器，匹配所有使用E标签的元素               p { color:green; }
+
+.info和E.info: class选择器，匹配所有class属性中包含info的元素   .info { background:</span><span style="color: #008000;">#</span><span style="color: #008000;">ff0; }    p.info { background:blue; }</span>
+
+<span style="color: #008000;">#</span><span style="color: #008000;">info和E#info  id选择器，匹配所有id属性等于footer的元素         #info { background:#ff0; }   p#info { background:#ff0; }</span></pre>
+</div>
+<h4>2 组合选择器</h4>
+<a href="26-day组合选择器.html" target="_blank">26-day组合选择器</a>
+<div class="cnblogs_code">
+<pre> E,F         多元素选择器，同时匹配所有E元素或F元素，E和F之间用逗号分隔         div,p { color:<span style="color: #008000;">#</span><span style="color: #008000;">f00; }</span>
+<span style="color: #000000;">
+ E F         后代元素选择器，匹配所有属于E元素后代的F元素，E和F之间用空格分隔    </span>li a { font-weight:bold;</pre>
+<pre><span style="color: #000000;"> E </span>&gt; F       子元素选择器，匹配所有E元素的子元素F                            div &gt; p { color:<span style="color: #008000;">#</span><span style="color: #008000;">f00; }</span><span style="color: #008000;"><br />&nbsp;<br /> </span><span style="color: #008000;">E + F &nbsp; &nbsp; &nbsp; 毗邻元素选择器，匹配所有紧随E元素之后的同级元素F &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;div + p { color:#f00; } &nbsp;</span></pre>
+</div>
+<div class="cnblogs_code" onclick="cnblogs_code_show('4d3bf81d-f7ba-4777-a796-763239e904bd')"><img id="code_img_closed_4d3bf81d-f7ba-4777-a796-763239e904bd" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_4d3bf81d-f7ba-4777-a796-763239e904bd" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('4d3bf81d-f7ba-4777-a796-763239e904bd',event)" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" />
+<div id="cnblogs_code_open_4d3bf81d-f7ba-4777-a796-763239e904bd" class="cnblogs_code_hide">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=<span style="color: #800000;">"</span><span style="color: #800000;">en</span><span style="color: #800000;">"</span>&gt;
+&lt;head&gt;
+    &lt;meta charset=<span style="color: #800000;">"</span><span style="color: #800000;">UTF-8</span><span style="color: #800000;">"</span>&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;style&gt;<span style="color: #000000;">
+
+        .div1</span>&gt;<span style="color: #000000;">p{
+            background</span>-<span style="color: #000000;">color: aqua;
+            color: deeppink;
+        }
+
+        .main2</span>&gt;<span style="color: #000000;">div{
+            background</span>-<span style="color: #000000;">color: blueviolet;
+            color: chartreuse;
+        }
+    </span>&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+      &lt;div <span style="color: #0000ff;">class</span>=<span style="color: #800000;">"</span><span style="color: #800000;">div1</span><span style="color: #800000;">"</span>&gt;<span style="color: #000000;">hello1
+          </span>&lt;div <span style="color: #0000ff;">class</span>=<span style="color: #800000;">"</span><span style="color: #800000;">div2</span><span style="color: #800000;">"</span>&gt;<span style="color: #000000;">hello2
+              </span>&lt;div&gt;hello4&lt;/div&gt;
+              &lt;p&gt;hello5&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;p&gt;hello3&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;p&gt;hello6&lt;/p&gt;
+
+&lt;hr&gt;
+
+     &lt;div <span style="color: #0000ff;">class</span>=<span style="color: #800000;">"</span><span style="color: #800000;">main2</span><span style="color: #800000;">"</span>&gt;1
+       &lt;div&gt;2
+           &lt;div&gt;
+               4
+           &lt;/div&gt;
+       &lt;/div&gt;
+       &lt;div&gt;
+               3
+           &lt;/div&gt;
+     &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p>注意<strong>嵌套规则</strong>：</p>
+<div><ol>
+<li>块级元素可以包含内联元素或<strong>某些</strong>块级元素，但内联元素不能包含块级元素，它只能包含其它内联元素。</li>
+<li><strong>有几个特殊的块级元素只能包含内联元素，不能包含块级元素</strong>。如h1,h2,h3,h4,h5,h6,p,dt</li>
+<li>li内可以包含div</li>
+<li>块级元素与块级元素并列、内联元素与内联元素并列。</li>
+</ol>
+<div class="cnblogs_code" onclick="cnblogs_code_show('e89c7de1-952d-4be2-b833-7b2b6736109b')"><img id="code_img_closed_e89c7de1-952d-4be2-b833-7b2b6736109b" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_e89c7de1-952d-4be2-b833-7b2b6736109b" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('e89c7de1-952d-4be2-b833-7b2b6736109b',event)" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" />
+<div id="cnblogs_code_open_e89c7de1-952d-4be2-b833-7b2b6736109b" class="cnblogs_code_hide">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=<span style="color: #800000;">"</span><span style="color: #800000;">en</span><span style="color: #800000;">"</span>&gt;
+&lt;head&gt;
+    &lt;meta charset=<span style="color: #800000;">"</span><span style="color: #800000;">UTF-8</span><span style="color: #800000;">"</span>&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;style&gt;<span style="color: #000000;">
+        [suoning]{
+            color: blueviolet;
+        }
+        .he</span>&gt;<span style="color: #000000;">div{
+            color: bisque;
+        }
+
+    </span>&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div <span style="color: #0000ff;">class</span>=<span style="color: #800000;">"</span><span style="color: #800000;">he</span><span style="color: #800000;">"</span>&gt;111
+    &lt;p <span style="color: #0000ff;">class</span>=<span style="color: #800000;">"</span><span style="color: #800000;">fr</span><span style="color: #800000;">"</span>&gt;222
+        &lt;div&gt;333&lt;/div&gt;
+    &lt;/p&gt;
+    &lt;div&gt;444&lt;/div&gt;
+&lt;/div&gt;
+
+
+***************************
+
+&lt;div suoning=<span style="color: #800000;">"</span><span style="color: #800000;">sb</span><span style="color: #800000;">"</span>&gt;<span style="color: #000000;">ddd
+         </span>&lt;p&gt;pppp&lt;/p&gt;
+     &lt;/div&gt;
+     &lt;p suoning=<span style="color: #800000;">"</span><span style="color: #800000;">sb2</span><span style="color: #800000;">"</span>&gt;<span style="color: #000000;">ddd2
+         </span>&lt;p&gt;pppp2&lt;/p&gt;
+     &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<h4>3&nbsp;属性选择器</h4>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;"> E[att]         匹配所有具有att属性的E元素，不考虑它的值。（注意：E在此处可以省略，比如&ldquo;[cheacked]&rdquo;。以下同。）   p[title] { color:</span><span style="color: #008000;">#</span><span style="color: #008000;">f00; }</span>
+<span style="color: #000000;">
+
+ E[att</span>=val]     匹配所有att属性等于&ldquo;val&rdquo;的E元素                                 div[<span style="color: #0000ff;">class</span>=&rdquo;error&rdquo;] { color:<span style="color: #008000;">#</span><span style="color: #008000;">f00; }</span>
+<span style="color: #000000;">
+
+ E[att</span>~=val]    匹配所有att属性具有多个空格分隔的值、其中一个值等于&ldquo;val&rdquo;的E元素      td[<span style="color: #0000ff;">class</span>~=&rdquo;name&rdquo;] { color:<span style="color: #008000;">#</span><span style="color: #008000;">f00; }</span>
+<span style="color: #000000;">
+ E[attr</span>^=val]    匹配属性值以指定值开头的每个元素                     div[<span style="color: #0000ff;">class</span>^=<span style="color: #800000;">"</span><span style="color: #800000;">test</span><span style="color: #800000;">"</span>]{background:<span style="color: #008000;">#</span><span style="color: #008000;">ffff00;}</span>
+<span style="color: #000000;">
+ E[attr$</span>=val]    匹配属性值以指定值结尾的每个元素                     div[<span style="color: #0000ff;">class</span>$=<span style="color: #800000;">"</span><span style="color: #800000;">test</span><span style="color: #800000;">"</span>]{background:<span style="color: #008000;">#</span><span style="color: #008000;">ffff00;}</span>
+<span style="color: #000000;">
+ E[attr</span>*=val]    匹配属性值中包含指定值的每个元素                     div[<span style="color: #0000ff;">class</span>*=<span style="color: #800000;">"</span><span style="color: #800000;">test</span><span style="color: #800000;">"</span>]{background:<span style="color: #008000;">#</span><span style="color: #008000;">ffff00;}</span><span style="color: #000000;"><br /></span></pre>
+</div>
+<h4>4 伪类<span class="color_h1">(Pseudo-classes)</span></h4>
+<p><span class="color_h1">CSS伪类是用来给选择器添加一些特殊效果。</span></p>
+<p><strong>anchor伪类：</strong>专用于控制链接的显示效果</p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;">
+a:link（没有接触过的链接）,用于定义了链接的常规状态。
+
+a:hover（鼠标放在链接上的状态）,用于产生视觉效果。
+
+a:visited（访问过的链接）,用于阅读文章，能清楚的判断已经访问过的链接。
+
+a:active（在链接上按下鼠标时的状态）,用于表现鼠标按下时的链接状态。
+
+伪类选择器 : 伪类指的是标签的不同状态:
+
+           a </span>==&gt;<span style="color: #000000;"> 点过状态 没有点过的状态 鼠标悬浮状态 激活状态
+
+a:link {color: </span><span style="color: #008000;">#</span><span style="color: #008000;">FF0000} /* 未访问的链接 */</span>
+<span style="color: #000000;">
+a:visited {color: </span><span style="color: #008000;">#</span><span style="color: #008000;">00FF00} /* 已访问的链接 */</span>
+<span style="color: #000000;">
+a:hover {color: </span><span style="color: #008000;">#</span><span style="color: #008000;">FF00FF} /* 鼠标移动到链接上 */</span>
+<span style="color: #000000;">
+a:active {color: </span><span style="color: #008000;">#</span><span style="color: #008000;">0000FF} /* 选定的链接 */ 格式: 标签:伪类名称{ css代码; }</span></pre>
+</div>
+<div class="cnblogs_code" onclick="cnblogs_code_show('7b0eacb7-cb86-4ce1-8f72-8f9336a9b0e6')"><img id="code_img_closed_7b0eacb7-cb86-4ce1-8f72-8f9336a9b0e6" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_7b0eacb7-cb86-4ce1-8f72-8f9336a9b0e6" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('7b0eacb7-cb86-4ce1-8f72-8f9336a9b0e6',event)" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" />
+<div id="cnblogs_code_open_7b0eacb7-cb86-4ce1-8f72-8f9336a9b0e6" class="cnblogs_code_hide">
+<pre>&lt;style type=<span style="color: #800000;">"</span><span style="color: #800000;">text/css</span><span style="color: #800000;">"</span>&gt;<span style="color: #000000;">
+    a:link{
+        color: red;
+    }
+    a:visited {
+        color: blue;
+    }
+    a:hover {
+        color: green;
+    }
+    a:active {
+        color: yellow;
+    }
+</span>&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;a href=<span style="color: #800000;">"</span><span style="color: #800000;">01-hello-world.html</span><span style="color: #800000;">"</span>&gt;hello-world&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p><strong>补充：</strong></p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:javascript;gutter:true;">.outer:hover .right{color: red}</pre>
+</div>
+<p><strong>before after</strong>伪类 ：</p>
+<div class="cnblogs_code">
+<pre>:before    p:before       在每个&lt;p&gt;<span style="color: #000000;">元素之前插入内容
+:after     p:after        在每个</span>&lt;p&gt;<span style="color: #000000;">元素之后插入内容
+</span><span style="color: #000000;"><br /></span></pre>
+<pre><span> p:before        在每个 &lt;p&gt; 元素的内容之前插入内容                    p:before{content:"hello"<span>;color:red}
+ p:after         在每个 &lt;p&gt; 元素的内容之前插入内容                    p:after{ content:"hello"；color:red}</span></span></pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
