@@ -236,6 +236,640 @@ a:active {color: </span><span style="color: #008000;">#</span><span style="color
 
 
 
+<h3>三 &nbsp;CSS的常用属性&nbsp;</h3>
+<h4>1&nbsp;&nbsp;颜色属性</h4>
+<div class="cnblogs_Highlighter">
+<pre class="brush:python;gutter:true;">  &lt;div style="color:blueviolet"&gt;ppppp&lt;/div&gt;
+
+  &lt;div style="color:#ffee33"&gt;ppppp&lt;/div&gt;
+
+  &lt;div style="color:rgb(255,0,0)"&gt;ppppp&lt;/div&gt;
+
+  &lt;div style="color:rgba(255,0,0,0.5)"&gt;ppppp&lt;/div&gt;
+</pre>
+</div>
+<h4>2 &nbsp;字体属性</h4>
+<div class="cnblogs_Highlighter">
+<pre class="brush:python;gutter:true;">font-size: 20px/50%/larger
+
+font-family:'Lucida Bright'
+
+font-weight: lighter/bold/border/
+
+&lt;h1 style="font-style: oblique"&gt;老男孩&lt;/h1&gt;
+</pre>
+</div>
+<h4>3 &nbsp;背景属性</h4>
+<div class="cnblogs_code">
+<pre>background-<span style="color: #000000;">color: cornflowerblue
+
+background</span>-image: url(<span style="color: #800000;">'</span><span style="color: #800000;">1.jpg</span><span style="color: #800000;">'</span><span style="color: #000000;">);
+
+background</span>-repeat: no-<span style="color: #000000;">repeat;(repeat:平铺满)
+
+background</span>-<span style="color: #000000;">position: right top（20px 20px）;(横向：left center right)(纵向：top center bottom)
+
+      简写：</span>&lt;body style=<span style="color: #800000;">"</span><span style="color: #800000;">background: 20px 20px no-repeat #ff4 url('1.jpg')</span><span style="color: #800000;">"</span>&gt;
+
+              &lt;div style=<span style="color: #800000;">"</span><span style="color: #800000;">width: 300px;height: 300px;background: 20px 20px no-repeat #ff4 url('1.jpg')</span><span style="color: #800000;">"</span>&gt;&nbsp;</pre>
+</div>
+<p><span style="color: #800080;">注意：如果将背景属性加在body上，要记得给body加上一个height，否则结果异常，这是因为body为空，无法撑起背景图片；另外，如果此时要设置一个</span><span style="color: #800080;">width＝100px，你也看不出效果，除非你设置出html。 &nbsp;&nbsp;</span></p>
+<div class="cnblogs_code" onclick="cnblogs_code_show('9ac152c5-d3de-4fb7-a8a3-9d0f3ed85105')"><img id="code_img_closed_9ac152c5-d3de-4fb7-a8a3-9d0f3ed85105" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_9ac152c5-d3de-4fb7-a8a3-9d0f3ed85105" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('9ac152c5-d3de-4fb7-a8a3-9d0f3ed85105',event)" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" />
+<div id="cnblogs_code_open_9ac152c5-d3de-4fb7-a8a3-9d0f3ed85105" class="cnblogs_code_hide">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=<span style="color: #800000;">"</span><span style="color: #800000;">en</span><span style="color: #800000;">"</span>&gt;
+&lt;head&gt;
+    &lt;meta charset=<span style="color: #800000;">"</span><span style="color: #800000;">UTF-8</span><span style="color: #800000;">"</span>&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;style&gt;<span style="color: #000000;">
+        html{
+            background</span>-<span style="color: #000000;">color: antiquewhite;
+
+        }
+        body{
+            width: 100px;
+            height: 600px;
+            background</span>-<span style="color: #000000;">color: deeppink;
+            background</span>-image: url(1<span style="color: #000000;">.jpg);
+            background</span>-repeat: no-<span style="color: #000000;">repeat;
+            background</span>-<span style="color: #000000;">position: center center;
+        }
+    </span>&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<h4>eg:</h4>
+<div class="cnblogs_code" onclick="cnblogs_code_show('0b717707-8f72-4a2a-8c11-3953b5b70d24')"><img id="code_img_closed_0b717707-8f72-4a2a-8c11-3953b5b70d24" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_0b717707-8f72-4a2a-8c11-3953b5b70d24" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('0b717707-8f72-4a2a-8c11-3953b5b70d24',event)" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" />
+<div id="cnblogs_code_open_0b717707-8f72-4a2a-8c11-3953b5b70d24" class="cnblogs_code_hide">
+<pre><span style="color: #0000ff;">&lt;!</span><span style="color: #ff00ff;">DOCTYPE html</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">html </span><span style="color: #ff0000;">lang</span><span style="color: #0000ff;">="en"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">meta </span><span style="color: #ff0000;">charset</span><span style="color: #0000ff;">="UTF-8"</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>Title<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">style</span><span style="color: #0000ff;">&gt;</span><span style="background-color: #f5f5f5; color: #800000;">
+
+        span</span><span style="background-color: #f5f5f5; color: #000000;">{</span><span style="background-color: #f5f5f5; color: #ff0000;">
+            display</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;"> inline-block</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #ff0000;">
+            width</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;"> 18px</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #ff0000;">
+            height</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;"> 20px</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #ff0000;">
+            background-image</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;"> url("http://dig.chouti.com/images/icon_18_118.png?v=2.13")</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #ff0000;">
+            background-position</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;"> 0 -100px</span><span style="background-color: #f5f5f5; color: #000000;">;</span>
+        <span style="background-color: #f5f5f5; color: #000000;">}</span>
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">style</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">body</span><span style="color: #0000ff;">&gt;</span>
+
+
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">body</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">html</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<h4>4 &nbsp;文本属性</h4>
+<div class="cnblogs_code">
+<pre>font-<span style="color: #000000;">size: 10px;
+
+text</span>-<span style="color: #000000;">align: center;   横向排列
+
+line</span>-height: 200px;   文本行高 通俗的讲，文字高度加上文字上下的空白区域的高度 50%<span style="color: #000000;">:基于字体大小的百分比
+
+vertical</span>-<span style="color: #000000;">align:－4px  设置元素内容的垂直对齐方式 ,只对行内元素有效，对块级元素无效
+
+
+text</span>-indent: 150px;   首行缩进<span style="color: #000000;">
+letter</span>-<span style="color: #000000;">spacing: 10px;
+word</span>-<span style="color: #000000;">spacing: 20px;
+text</span>-transform: capitalize;</pre>
+</div>
+<h4>思考：</h4>
+<div class="cnblogs_code" onclick="cnblogs_code_show('2880629f-8a4b-46f3-9daf-b1a15eaffc0e')"><img id="code_img_closed_2880629f-8a4b-46f3-9daf-b1a15eaffc0e" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_2880629f-8a4b-46f3-9daf-b1a15eaffc0e" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('2880629f-8a4b-46f3-9daf-b1a15eaffc0e',event)" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" />
+<div id="cnblogs_code_open_2880629f-8a4b-46f3-9daf-b1a15eaffc0e" class="cnblogs_code_hide">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;style&gt;<span style="color: #000000;">
+
+
+
+        .outer .item {
+            width: 300px;
+            height: 200px;
+            background</span>-<span style="color: #000000;">color: chartreuse;
+            display: inline</span>-<span style="color: #000000;">block;
+        }
+
+
+    </span>&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="outer"&gt;
+        &lt;div class="item" style="vertical-align: top"&gt;<span style="color: #000000;">ll
+        </span>&lt;/div&gt;
+        &lt;div class="item"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<span class="cnblogs_code_collapse">vertical-align</span></div>
+<h4>5 &nbsp;&nbsp;边框属性</h4>
+<div class="cnblogs_Highlighter">
+<pre class="brush:python;gutter:true;">border-style: solid;
+
+border-color: chartreuse;
+
+border-width: 20px;
+
+简写：border: 30px rebeccapurple solid;
+</pre>
+</div>
+<h4>6&nbsp;&nbsp; 列表属性</h4>
+<div class="cnblogs_Highlighter">
+<pre class="brush:python;gutter:true;">ul,ol{   list-style: decimal-leading-zero;
+         list-style: none; <br />         list-style: circle;
+         list-style: upper-alpha;
+         list-style: disc; }
+</pre>
+</div>
+<h4>7 &nbsp;dispaly属性</h4>
+<div class="cnblogs_Highlighter">
+<pre class="brush:python;gutter:true;">none
+block
+inline
+</pre>
+</div>
+<p>display:inline-block可做列表布局，其中的类似于图片间的间隙小bug可以通过如下设置解决：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:javascript;gutter:true;">#outer{
+            border: 3px dashed;
+            word-spacing: -5px;
+        }</pre>
+</div>
+<h4>8 &nbsp;外边距和内边&nbsp; &nbsp;</h4>
+<p><img src="https://images2015.cnblogs.com/blog/877318/201610/877318-20161020102031154-222250498.png" alt="" width="249" height="210" /><img src="https://images2015.cnblogs.com/blog/877318/201610/877318-20161020102104482-1393899329.png" alt="" width="209" height="209" /><img src="https://images2015.cnblogs.com/blog/877318/201610/877318-20161020102135748-1861483747.png" alt="" width="345" height="208" /></p>
+<ul>
+<li><strong>margin: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;用于控制元素与元素之间的距离；margin的最基本用途就是控制元素周围空间的间隔，从视觉角度上达到相互隔开的目的。</strong></li>
+<li><strong>padding: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 用于控制内容与边框之间的距离； &nbsp;&nbsp;</strong></li>
+<li><strong>Border(边框) &nbsp; &nbsp; 围绕在内边距和内容外的边框。</strong></li>
+<li><strong>Content(内容) &nbsp; 盒子的内容，显示文本和图像。</strong></li>
+</ul>
+<p>元素的宽度和高度:</p>
+<p><img src="http://www.runoob.com/images/lamp.gif" alt="Remark" /><strong>重要:</strong>&nbsp;当您指定一个CSS元素的宽度和高度属性时，你只是设置内容区域的宽度和高度。要知道，完全大小的元素，你还必须添加填充，边框和边距。.</p>
+<div class="cnblogs_code">
+<pre>margin:10px 5px 15px 20px;-----------<span style="color: #000000;">上 右 下 左
+margin:10px 5px 15px;</span>----------------<span style="color: #000000;">上 右左 下
+margin:10px 5px;</span>---------------------<span style="color: #000000;">上下  右左
+margin:10px;    </span>---------------------上右下左</pre>
+</div>
+<p>下面的例子中的元素的总宽度为300px：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;">width:250px;
+padding:10px;
+border:5px solid gray;
+margin:10px;</span><em><strong>&nbsp; &nbsp;</strong></em></pre>
+</div>
+<p>&nbsp;练习： 300px*300px的盒子装着100px*100px的盒子，分别通过margin和padding设置将小盒子 移到大盒子的中间</p>
+<div class="cnblogs_code" onclick="cnblogs_code_show('889d9e0b-2b24-413a-9c4b-25557ed1a894')"><img id="code_img_closed_889d9e0b-2b24-413a-9c4b-25557ed1a894" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_889d9e0b-2b24-413a-9c4b-25557ed1a894" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('889d9e0b-2b24-413a-9c4b-25557ed1a894',event)" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" />
+<div id="cnblogs_code_open_889d9e0b-2b24-413a-9c4b-25557ed1a894" class="cnblogs_code_hide">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=<span style="color: #800000;">"</span><span style="color: #800000;">en</span><span style="color: #800000;">"</span>&gt;
+&lt;head&gt;
+    &lt;meta charset=<span style="color: #800000;">"</span><span style="color: #800000;">UTF-8</span><span style="color: #800000;">"</span>&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;style&gt;<span style="color: #000000;">
+
+        .div1{
+            background</span>-<span style="color: #000000;">color: aqua;
+            width: 300px;
+            height: 300px;
+        }
+        .div2{
+            background</span>-<span style="color: #000000;">color: blueviolet;
+            width: 100px;
+            height: 100px;
+        }
+    </span>&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+       &lt;div <span style="color: #0000ff;">class</span>=<span style="color: #800000;">"</span><span style="color: #800000;">div1</span><span style="color: #800000;">"</span>&gt;
+           &lt;div <span style="color: #0000ff;">class</span>=<span style="color: #800000;">"</span><span style="color: #800000;">div2</span><span style="color: #800000;">"</span>&gt;&lt;/div&gt;
+           &lt;div <span style="color: #0000ff;">class</span>=<span style="color: #800000;">"</span><span style="color: #800000;">div2</span><span style="color: #800000;">"</span>&gt;&lt;/div&gt;
+       &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p><span style="color: #800080;">思考1:</span></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;边框在默认情况下会定位于浏览器窗口的左上角，但是并没有紧贴着浏览器的窗口的边框，这是因为body本身也是一个盒子（外层还有html），在默认情况下， &nbsp; body距离html会有若干像素的margin，具体数值因各个浏览器不尽相同，所以body中的盒子不会紧贴浏览器窗口的边框了，为了验证这一点，加上：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:python;gutter:true;">body{
+    border: 1px solid;
+    background-color: cadetblue;
+}
+</pre>
+</div>
+<p class="p1"><span class="s1">&gt;&gt;&gt;&gt;解决方法：</span></p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:python;gutter:true;">body{
+    margin: 0;
+}
+</pre>
+</div>
+<p><span style="color: #800080;">思考2：</span></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;margin collapse（边界塌陷或者说边界重叠）</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 外边距的重叠只产生在普通流文档的上下外边距之间，这个看起来有点奇怪的规则，其实有其现实意义。设想，当我们上下排列一系列规则的块级元素（如段 &nbsp; &nbsp; 落P）时，那么块元素之间因为外边距重叠的存在，段落之间就不会产生双倍的距离。又比如停车场</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1兄弟div：上面div的margin-bottom和下面div的margin-top会塌陷，也就是会取上下两者margin里最大值作为显示值</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2父子div &nbsp;&nbsp;&nbsp;</p>
+<p><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </em>&nbsp;if &nbsp;父级div中没有 border，padding，inline content，子级div的margin会一直向上找，直到找到某个标签包括border，padding，inline content &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;中的其中一个，然后按此div 进行margin&nbsp;；</p>
+<div class="cnblogs_code" onclick="cnblogs_code_show('aae4787c-4552-48ec-990b-0087a85b4a84')"><img id="code_img_closed_aae4787c-4552-48ec-990b-0087a85b4a84" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_aae4787c-4552-48ec-990b-0087a85b4a84" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('aae4787c-4552-48ec-990b-0087a85b4a84',event)" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" />
+<div id="cnblogs_code_open_aae4787c-4552-48ec-990b-0087a85b4a84" class="cnblogs_code_hide">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=<span style="color: #800000;">"</span><span style="color: #800000;">en</span><span style="color: #800000;">"</span> style=<span style="color: #800000;">"</span><span style="color: #800000;">padding: 0px</span><span style="color: #800000;">"</span>&gt;
+&lt;head&gt;
+    &lt;meta charset=<span style="color: #800000;">"</span><span style="color: #800000;">UTF-8</span><span style="color: #800000;">"</span>&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;style&gt;<span style="color: #000000;">
+
+        body{
+            margin: 0px;
+        }
+
+        .div1{
+            background</span>-<span style="color: #000000;">color: aqua;
+            width: 300px;
+            height: 300px;
+        }
+        .div2{
+            background</span>-<span style="color: #000000;">color: blueviolet;
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+
+        }
+    </span>&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div style=<span style="color: #800000;">"</span><span style="color: #800000;">background-color: cadetblue;width: 300px;height: 300px</span><span style="color: #800000;">"</span>&gt;&lt;/div&gt;
+
+       &lt;div <span style="color: #0000ff;">class</span>=<span style="color: #800000;">"</span><span style="color: #800000;">div1</span><span style="color: #800000;">"</span>&gt;
+           &lt;div <span style="color: #0000ff;">class</span>=<span style="color: #800000;">"</span><span style="color: #800000;">div2</span><span style="color: #800000;">"</span>&gt;&lt;/div&gt;
+           &lt;div <span style="color: #0000ff;">class</span>=<span style="color: #800000;">"</span><span style="color: #800000;">div2</span><span style="color: #800000;">"</span>&gt;&lt;/div&gt;
+       &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p>&nbsp;解决方法：</p>
+<div class="cnblogs_code">
+<pre>1<span style="color: #000000;">: border:1px solid transparent
+</span>2<span style="color: #000000;">:  padding:1px
+</span>3: over-flow:hidden; </pre>
+</div>
+<h3>9&nbsp;float属性</h3>
+<p>先来了解一下block元素和inline元素在文档流中的排列方式。</p>
+<p>　　block元素通常被现实为独立的一块，独占一行，多个block元素会各自新起一行，默认block元素宽度自动填满其父元素宽度。block元素可以设置width、height、margin、padding属性；</p>
+<p>　　inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。inline元素设置width、height属性无效。inline元素的margin和padding属性。水平方向的padding-left, padding-right, margin-left, margin-right都产生边距效果；但竖直方向的padding-top, padding-bottom, margin-top, margin-bottom不会产生边距效果。</p>
+<ul>
+<li>常见的块级元素有 div、form、table、p、pre、h1～h5、dl、ol、ul 等。</li>
+<li>常见的内联元素有span、a、strong、em、label、input、select、textarea、img、br等</li>
+</ul>
+<p>&nbsp; &nbsp;&nbsp;<strong>&nbsp;</strong></p>
+<p><strong>所谓的文档流</strong>，指的是元素排版布局过程中，元素会自动从左往右，从上往下的流式排列。</p>
+<p><strong>脱离文档流</strong>，也就是将元素从普通的布局排版中拿走，其他盒子在定位的时候，<strong>会当做脱离文档流的元素不存在而进行定位</strong>。</p>
+<p><strong>只有绝对定位absolute和浮动float才会脱离文档流。</strong></p>
+<p>&nbsp; &nbsp;&nbsp;&nbsp;---部分无视和完全无视的区别？需要注意的是，使用float脱离文档流时，其他盒子会无视这个元素，但其他盒子内的文本依然会为这个元素让出位置，环绕在周围(可以说是部分无视)。而对于使用absolute position脱离文档流的元素，其他盒子与其他盒子内的文本都会无视它。(可以说是完全无视)</p>
+<h4><strong>浮动的表现</strong></h4>
+<p>&nbsp; &nbsp; &nbsp; 定义：浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。由于浮动框不在文档的普通流中，所以文档的普通流中的浮动框之后的块框表现得就像浮动框不存在一样。（注意这里是块框而不是内联元素；浮动框只对它后面的元素造成影响）</p>
+<p><span style="color: #800080;"><strong>注意 当初float被设计的时候就是用来完成文本环绕的效果，所以文本不会被挡住，这是float的特性，即float是一种不彻底的脱离文档流方式。</strong>无论多么复杂的布局，其基本出发点均是：&ldquo;<strong>如何在一行显示多个div元素</strong>&rdquo;。</span></p>
+<p class="p1"><strong>现象1:</strong></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; 假如某个div元素A是浮动的，如果A元素上一个元素也是浮动的，那么A元素会跟随在上一个元素的后边(如果一行放不下这两个元素，那么A元素会被挤到下一行)；如果A元素上一个元素是标准流中的元素，那么A的相对垂直位置不会改变，也就是说A的顶部总是和上一个元素的底部对齐。此外，浮动的框之后的block元素元素会认为这个框不存在，但其中的文本依然会为这个元素让出位置。&nbsp;浮动的框之后的inline元素，会为这个框空出位置，然后按顺序排列。</span></p>
+<p class="p1"><strong>现象2:</strong></p>
+<p style="margin-left: 30px;">(1)左右结构div盒子重叠现象，一般是由于相邻两个DIV一个使用浮动一个没有使用浮动。如上面的例1：相邻的两个盒子box2向左浮动、box3未浮动。一个使用浮动一个没有导致DIV不是在同个&ldquo;平面&rdquo;上，但内容不会照成覆盖现象，只有DIV形成覆盖现象。</p>
+<p style="margin-left: 30px;">解决方法：要么都不使用浮动；要么都使用float浮动；要么对没有使用float浮动的DIV设置margin样式。</p>
+<p style="margin-left: 30px;">(2)上下结构div盒子重叠现象</p>
+<div class="cnblogs_code" onclick="cnblogs_code_show('9c92c419-77ae-47c8-8148-92f614f932c4')"><img id="code_img_closed_9c92c419-77ae-47c8-8148-92f614f932c4" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_9c92c419-77ae-47c8-8148-92f614f932c4" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('9c92c419-77ae-47c8-8148-92f614f932c4',event)" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" />
+<div id="cnblogs_code_open_9c92c419-77ae-47c8-8148-92f614f932c4" class="cnblogs_code_hide">
+<pre><span style="color: #0000ff;">&lt;!</span><span style="color: #ff00ff;">DOCTYPE html</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">html </span><span style="color: #ff0000;">lang</span><span style="color: #0000ff;">="en"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">meta </span><span style="color: #ff0000;">charset</span><span style="color: #0000ff;">="UTF-8"</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>Title<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">style </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/css"</span><span style="color: #0000ff;">&gt;</span><span style="background-color: #f5f5f5; color: #800000;">
+         * </span><span style="background-color: #f5f5f5; color: #000000;">{</span><span style="background-color: #f5f5f5; color: #ff0000;">
+             margin</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">0</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #ff0000;">padding</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">0</span><span style="background-color: #f5f5f5; color: #000000;">;</span>
+         <span style="background-color: #f5f5f5; color: #000000;">}</span><span style="background-color: #f5f5f5; color: #800000;">
+        .container</span><span style="background-color: #f5f5f5; color: #000000;">{</span><span style="background-color: #f5f5f5; color: #ff0000;">
+            border</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">1px solid red</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #ff0000;">width</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">300px</span><span style="background-color: #f5f5f5; color: #000000;">;</span>
+        <span style="background-color: #f5f5f5; color: #000000;">}</span><span style="background-color: #f5f5f5; color: #800000;">
+        #box1</span><span style="background-color: #f5f5f5; color: #000000;">{</span><span style="background-color: #f5f5f5; color: #ff0000;">
+            background-color</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">green</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #ff0000;">float</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">left</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #ff0000;">width</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">100px</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #ff0000;">height</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">100px</span><span style="background-color: #f5f5f5; color: #000000;">;</span>
+        <span style="background-color: #f5f5f5; color: #000000;">}</span><span style="background-color: #f5f5f5; color: #800000;">
+        #box2</span><span style="background-color: #f5f5f5; color: #000000;">{</span><span style="background-color: #f5f5f5; color: #ff0000;">
+            background-color</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">deeppink</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #ff0000;"> float</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">right</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #ff0000;">width</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">100px</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #ff0000;">height</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">100px</span><span style="background-color: #f5f5f5; color: #000000;">;</span>
+        <span style="background-color: #f5f5f5; color: #000000;">}</span><span style="background-color: #f5f5f5; color: #800000;">
+         #box3</span><span style="background-color: #f5f5f5; color: #000000;">{</span><span style="background-color: #f5f5f5; color: #ff0000;">
+             background-color</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">pink</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #ff0000;">height</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">40px</span><span style="background-color: #f5f5f5; color: #000000;">;</span>
+         <span style="background-color: #f5f5f5; color: #000000;">}</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">style</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">body</span><span style="color: #0000ff;">&gt;</span>
+
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">="container"</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="box1"</span><span style="color: #0000ff;">&gt;</span>box1 向左浮动<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="box2"</span><span style="color: #0000ff;">&gt;</span>box2 向右浮动<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="box3"</span><span style="color: #0000ff;">&gt;</span>box3<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">body</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">body</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">html</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p>例子如上：.container和box3的布局是上下结构，上图发现box3跑到了上面，与.container产生了重叠，但文本内容没有发生覆盖，只有div发生覆盖现象。这个原因是因为第一个大盒子里的子元素使用了浮动，脱离了文档流，导致.container没有被撑开。box3认为.container没有高度（未被撑开），因此跑上去了。</p>
+<p>解决方法：</p>
+<p>1、要么给.container设置固定高度，一般情况下文字内容不确定多少就不能设置固定高度，所以一般不能设置&ldquo;.container&rdquo;高度(当然能确定内容多高，这种情况下&ldquo;.container是可以设置一个高度即可解决覆盖问题。</p>
+<p>2、要么清除浮动。</p>
+<h4 class="p1"><span style="color: #800080;"><strong>清除浮动：</strong></span></h4>
+<p class="p1"><strong>在非IE浏览器（如Firefox）下，当容器的高度为auto，且容器的内容中有浮动（float为left或right）的元素，在这种情况下，容器的高度不能自动伸长以适应内容的高度，使得内容溢出到容器外面而影响（甚至破坏）布局的现象。这个现象叫浮动溢出，为了防止这个现象的出现而进行的CSS处理，就叫CSS清除浮动。</strong></p>
+<div class="cnblogs_code">
+<p>clear语法：<br />clear : none | left | right | both</p>
+<p>取值：<br />none : 默认值。允许两边都可以有浮动对象<br />left : 不允许左边有浮动对象<br />right : 不允许右边有浮动对象<br />both : 不允许有浮动对象</p>
+<p>但是需要注意的是：clear属性只会对<strong>自身</strong>起作用，而不会影响其他元素。如果一个元素的右侧有一浮动对象，而这个元素设置了不允许右边有浮动对象，即clear：right，则这个元素会自动下移一格，达到本元素右边没有浮动对象的目的。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<p class="p1"><strong>方式1(推荐):</strong></p>
+<div class="cnblogs_code">
+<pre>.clearfix:after {             &lt;----<span style="color: #000000;">在类名为&ldquo;clearfix&rdquo;的元素内最后面加入内容；
+content: </span>".";                 &lt;----<span style="color: #000000;">内容为&ldquo;.&rdquo;就是一个英文的句号而已。也可以不写。
+display: block;               </span>&lt;----<span style="color: #000000;">加入的这个元素转换为块级元素。
+clear: both;                  </span>&lt;----<span style="color: #000000;">清除左右两边浮动。
+visibility: hidden;           </span>&lt;----<span style="color: #000000;">可见度设为隐藏。注意它和display:none;是有区别的。visibility:hidden;仍然占据空间，只是看不到而已；
+line</span>-height: 0;               &lt;----<span style="color: #000000;">行高为0；
+height: </span>0;                    &lt;----<span style="color: #000000;">高度为0；
+font</span>-size:0;                  &lt;----<span style="color: #000000;">字体大小为0；
+}
+.clearfix { </span>*zoom:1;}         &lt;----这是针对于IE6的，因为IE6不支持:after伪类，这个神奇的zoom:1让IE6的元素可以清除浮动来包裹内部元素。</pre>
+</div>
+<p>整段代码就相当于在浮动元素后面跟了个宽高为0的空div，然后设定它clear:both来达到清除浮动的效果。&nbsp;<br />之所以用它，是因为，你不必在html文件中写入大量无意义的空标签，又能清除浮动。&nbsp;<br /><br />话说回来，你这段代码真是个累赘啊，这样写不利于维护。&nbsp;<br />只要写一个.clearfix就行了，然后在需要清浮动的元素中 添加clearfix类名就好了。&nbsp;<br />如：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:javascript;gutter:true;">&lt;div class="head clearfix"&gt;&lt;/div&gt;</pre>
+</div>
+<p><strong>方式2：</strong></p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:javascript;gutter:true;">overflow:hidden;</pre>
+</div>
+<p><strong>overflow</strong>：hidden的含义是超出的部分要裁切隐藏，float的元素虽然不在普通流中，但是他是浮动在普通流之上的，可以把普通流元素+浮动元素想象成一个立方体。如果没有明确设定包含容器高度的情况下，它要计算内容的全部高度才能确定在什么位置hidden，这样浮动元素的高度就要被计算进去。这样包含容器就会被撑开，清除浮动。</p>
+<h3>10&nbsp;position(定位)</h3>
+<h4><strong>1 static</strong></h4>
+<p><strong>static 默认值，无定位，不能当作绝对定位的参照物，并且设置标签对象的left、top等值是不起作用的的。</strong></p>
+<h4><strong>2 &nbsp;position: relative／absolute</strong></h4>
+<p><strong>&nbsp; &nbsp; </strong><strong>relative</strong> 相对定位。相对定位是相对于该元素在文档流中的原始位置，即以自己原始位置为参照物。有趣的是，即使设定了元素的相对定位以及偏移值，元素还占有着原来的位置，即占据文档流空间<strong>。<span style="color: #800080;">对象遵循正常文档流</span>，</strong>但将依据top，right，bottom，left等属性在正常文档流中偏移位置。而其层叠通过z-index属性定义。</p>
+<p><span style="color: #800080;">注意：position：relative的一个主要用法：方便绝对定位元素找到参照物。</span></p>
+<h4><strong>&nbsp; &nbsp; absolute&nbsp;</strong>绝对定位。</h4>
+<p>&nbsp; &nbsp; &nbsp; 定义：设置为绝对定位的元素框从文档流完全删除，并相对于最近的已定位祖先元素定位，如果元素没有已定位的祖先元素，那么它的位置相对于最初的包含块（即body元素）。元素原先在正常文档流中所占的空间会关闭，就好像该元素原来不存在一样。元素定位后生成一个块级框，而不论原来它在正常流中生成何种类型的框。</p>
+<p>重点：如果父级设置了position属性，例如position:relative;，那么子元素就会以父级的左上角为原始点进行定位。这样能很好的解决自适应网站的标签偏离问题，即父级为自适应的，那我子元素就设置position:absolute;父元素设置position:relative;，然后Top、Right、Bottom、Left用百分比宽度表示。</p>
+<p>&nbsp; &nbsp; &nbsp; 另外，对象脱离正常文档流，使用top，right，bottom，left等属性进行绝对定位。而其层叠通过z-index属性定义。</p>
+<p><span style="color: #800080;">总结：参照物用相对定位，子元素用绝对定位，并且保证相对定位参照物不会偏移即可。</span></p>
+<h4><strong>3 &nbsp;position:fixed</strong></h4>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; fixed：对象脱离正常文档流，使用top，right，bottom，left等属性以窗口为参考点进行定位，当出现滚动条时，对象不会随着滚动。而其层叠通过z-index属性 定义。 注意点： 一个元素若设置了 position:absolute | fixed; 则该元素就不能设置float。这 是一个常识性的知识点，因为这是两个不同的流，一个是浮动流，另一个是&ldquo;定位流&rdquo;。但是 relative 却可以。因为它原本所占的空间仍然占据文档流。</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;在理论上，被设置为fixed的元素会被定位于浏览器窗口的一个指定坐标，不论窗口是否滚动，它都会固定在这个位置。</p>
+<h4>4&nbsp;<strong>仅使用margin属性布局绝对定位元素</strong></h4>
+<p>此情况，margin-bottom 和margin-right的值不再对文档流中的元素产生影响，因为该元素已经脱离了文档流。另外，不管它的祖先元素有没有定位，都是以文档流中原来所在的位置上偏移参照物。&nbsp;&nbsp;<br />　　图9中，使用margin属性布局相对定位元素。<br />　　层级关系为：<br />　　&lt;div &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; position:relative;<br />　　&lt;div&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-没有设置为定位元素，不是参照物<br />　　&lt;div&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-没有设置为定位元素，不是参照物<br />　　&lt;div box1<br />　　&lt;div box2 &mdash;&mdash;&ndash;position:absolute;&nbsp;margin-top:50px; margin-left:120px;<br />　　&lt;div box3<br />　　效果图：</p>
+<p>&nbsp;</p>
+<p>　　<img src="https://images0.cnblogs.com/blog2015/449469/201507/292243208766594.jpg" alt="" /></p>
+<h3>11 关于css的拾遗</h3>
+<h4>11.1 inline-block 的间隙</h4>
+<div class="cnblogs_code" onclick="cnblogs_code_show('2acfb09f-a70d-4af9-8f91-33924a6472ae')"><img id="code_img_closed_2acfb09f-a70d-4af9-8f91-33924a6472ae" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_2acfb09f-a70d-4af9-8f91-33924a6472ae" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('2acfb09f-a70d-4af9-8f91-33924a6472ae',event)" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" />
+<div id="cnblogs_code_open_2acfb09f-a70d-4af9-8f91-33924a6472ae" class="cnblogs_code_hide">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;style&gt;<span style="color: #000000;">
+        a{
+            display: inline</span>-<span style="color: #000000;">block;
+            background</span>-<span style="color: #000000;">color: #2459a2;
+            width: 100px;
+            height: 100px;
+        }
+    </span>&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;a&gt;111&lt;/a&gt;
+&lt;a&gt;222&lt;/a&gt;
+&lt;a&gt;333&lt;/a&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p>inline-block默认的空格符就是标签与标签之间的空隙造成的。</p>
+<p>(1) 我们可以通过margin:-3px来解决，但是</p>
+<p style="margin-left: 30px;">1.我们布局肯定很多元素，不可能每个都添加margin负这样维护成本太大了</p>
+<p style="margin-left: 30px;">2.我们线上代码如果压缩，那么我们就不存在哪个4px的问题了，那么我们的margin负就回造成布局混乱！</p>
+<p>(2)我们可以给几个标签加一个父级div，然后：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:javascript;gutter:true;">div{word-spacing: -5px;}　　</pre>
+</div>
+<h4>11.2&nbsp;word-wrap &amp; <strong>word-break:</strong></h4>
+<p><strong>word-wrap:</strong></p>
+<p>the word-wrap CSS property is used to specify whether or not the browser is allowd to <br />break lines within words in order to prevent overflow when an otherwise unbreakable <br />string is too long to fit.</p>
+<p>The&nbsp;<code>word-wrap</code>&nbsp;property was invented by Microsoft and added to CSS3. It allows long words to be able to be broken and wrap onto the next line. It takes in two values;&nbsp;<code>normal</code>&nbsp;or&nbsp;<code>break-word</code>.</p>
+<p><strong>word-break:</strong></p>
+<p>The word-break CSS property is used to specify how (or if) to break lines within words</p>
+<div class="cnblogs_code" onclick="cnblogs_code_show('cde406ff-8cbe-41c9-a6c5-46278f854244')"><img id="code_img_closed_cde406ff-8cbe-41c9-a6c5-46278f854244" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_cde406ff-8cbe-41c9-a6c5-46278f854244" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('cde406ff-8cbe-41c9-a6c5-46278f854244',event)" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" />
+<div id="cnblogs_code_open_cde406ff-8cbe-41c9-a6c5-46278f854244" class="cnblogs_code_hide">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;style&gt;<span style="color: #000000;">
+
+
+        .p1{
+            width: 100px;
+            background</span>-<span style="color: #000000;">color: #84a42b;
+            word</span>-wrap: <span style="color: #0000ff;">break</span>-<span style="color: #000000;">word;
+            word</span>-<span style="color: #0000ff;">break</span>: <span style="color: #0000ff;">break</span>-<span style="color: #000000;">all;
+        }
+        .p2{
+            width: 100px;
+            background</span>-<span style="color: #000000;">color: darkgoldenrod;
+            word</span>-wrap: <span style="color: #0000ff;">break</span>-<span style="color: #000000;">word;
+            word</span>-<span style="color: #0000ff;">break</span>: <span style="color: #0000ff;">break</span>-<span style="color: #000000;">all;
+        }
+    </span>&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+
+&lt;p class="p1"&gt;hello yuan hello yuan hello yuan hello yuan hello yuan&lt;/p&gt;
+
+&lt;p class="p2"&gt;helloyuanhelloyuanhelloyuanhelloyuanhelloyuanhelloyuan&lt;/p&gt;
+
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<h4>1.3</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一旦给元素加上absolute或float就相当于给元素加上了display:block;。什么意思呢？比如内联元素span默认宽度是自适应的，你给其加上width是不起作用的。要想width定宽，你需要将span设成display:block。但如果你给span加上absolute或float，那span的display属性自动就变成block，就可以指定width了。</p>
+<h4>1.4 快写</h4>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:true;">    div   tab
+    a     tab
+    div.main&gt;ul&gt;li.c*4    tab
+</pre>
+</div>
+<h4>1.5 display:flex</h4>
+<h4>1.6 响应式布局</h4>
+<p>&nbsp;</p>
+<p>参考文献：</p>
+<p>http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</p>
+<p>http://www.jianshu.com/p/a3da5e27d22b</p>
+</div></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class = "postDesc">posted @ <span id="post-date">2016-10-19 16:39</span> <a href='https://www.cnblogs.com/yuanchenqi/'>Yuan先生</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>) &nbsp;<a href="https://i.cnblogs.com/EditArticles.aspx?postid=5977825" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(5977825);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=false,cb_blogId=262677,cb_entryId=5977825,cb_blogApp=currentBlogApp,cb_blogUserGuid='6d0ad0ce-3cb7-e511-9fc1-ac853d9f53cc',cb_entryCreatedDate='2016/10/19 16:39:00';loadViewCount(cb_entryId);var cb_postType=2;</script>
+
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id='comment_form' class='commentform'>
+<a name='commentform'></a>
+<div id='divCommentShow'></div>
+<div id='comment_nav'><span id='span_refresh_tips'></span><a href='javascript:void(0);' onclick='return RefreshCommentList();' id='lnk_RefreshComments' runat='server' clientidmode='Static'>刷新评论</a><a href='#' onclick='return RefreshPage();'>刷新页面</a><a href='#top'>返回顶部</a></div>
+<div id='comment_form_container'></div>
+<div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
+<div id='ad_t2'></div>
+<div id='opt_under_post'></div>
+<div id='cnblogs_c1' class='c_ad_block'></div>
+<div id='under_post_news'></div>
+<div id='cnblogs_c2' class='c_ad_block'></div>
+<div id='under_post_kb'></div>
+<div id='HistoryToday' class='c_ad_block'></div>
+<script type='text/javascript'>
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+
+			<DIV id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</DIV>
+
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+
+<!--done-->
+Copyright &copy;2018 Yuan先生
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+<!--PageEndHtml Block Begin-->
+<script language="javascript" type="text/javascript">
+//生成目录索引列表
+function GenerateContentList()
+{
+  var jquery_h1_list = $('#cnblogs_post_body h1').not('.catListTitle').not('#blogTitle h1');//如果你的章节标题不是h4,只需要将这里的h4换掉即可
+  if(jquery_h1_list.length>0)
+  {
+    var content = '<a name="_labelTop"></a>';
+    content	+= '<div id="navCategory">';
+    content	+= '<p style="font-size:25px;color:#EE1289;"><i>知识预览</i></p>';
+    content	+= '<ul id="sortChapter">';
+    for(var i =0;i<jquery_h1_list.length;i++)
+    {
+      var go_to_top = '<div style="text-align: right"><a href="#_labelTop">回到顶部</a><a name="_label' + i + '"></a></div>';
+      $(jquery_h1_list[i]).before(go_to_top);
+      var li_content = '<li><a href="#_label' + i + '"style="color: #003366;text-decoration:none;font-size:18px">' + $(jquery_h1_list[i]).text() + '</a></li>';
+      content += li_content;
+    }
+    content	+= '</ul>';
+    content	+= '</div>';
+    if($('#cnblogs_post_body').length != 0 )
+    {
+      $($('#cnblogs_post_body')[0]).prepend(content);
+    }
+  }
+}
+GenerateContentList();
+
+
+
+
+$('#Header1_HeaderTitle').attr('href','https://i.cnblogs.com/EditArticles.aspx')
+
+</script>
+<!--PageEndHtml Block End-->
 
 
 
