@@ -3,15 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>前端作业</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        .header-logo {
+                height: 44px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2459a2;
+    z-index: 1000;
+        }
+.header-content {
+    width: 1016px;
+    margin: 0 auto;
+    line-height: 44px;
+    height: 44px;
+    background-color: #2459a2;
+    position: relative;
+}
+        .digg-logo {
+    width: 121px;
+    height: 23px;
+    background: url(https://dig.chouti.com/images/logo.png) no-repeat 0 0;
+    float: left;
+    margin-top: 11px;
+}
+    </style>
 </head>
 <body>
-<div id="outer" style="background-color: blue">
-    <div id="inner1">
-        <div id="inner2" style="display: inline;background-color: maroon;padding: 20px;margin: 15ps" >热点</div>
+
+<div class="header-logo">
+    <div class="header-content">
+        <a href="https://dig.chouti.com/"  class="digg-logo">
+        </a>
     </div>
-
-
-
 </div>
 
 
