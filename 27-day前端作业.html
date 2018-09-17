@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <title>前端作业</title>
     <style>
+        body{
+            font-size: 18px;
+        }
         * {
             margin: 0;
         }
+        body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, a, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+        a {
+    text-decoration: none;
+}
         .header-logo {
                 height: 44px;
     width: 100%;
@@ -25,21 +37,117 @@
     position: relative;
 }
         .digg-logo {
-    width: 121px;
-    height: 23px;
-    background: url(https://dig.chouti.com/images/logo.png) no-repeat 0 0;
+            width: 121px;
+            height: 23px;
+            background: url(https://dig.chouti.com/images/logo.png) no-repeat 0 0;
+            float: left;
+            margin-top: 11px;
+        }
+.header-action {
     float: left;
-    margin-top: 11px;
+    line-height: 43px\9;
+    margin-left: 20px;
+    font-size: 12px;
 }
+        .header-action a.tb {
+    color: #c0cddf;
+    margin-left: -3px;
+    padding: 0 13px 0 16px;
+    display: inline-block;
+    vertical-align: 1px\9;
+}
+        .header-action a.active, .header-action a.active:hover{
+    color: #fff;
+    background-color: #204982;
+}
+.header-keysearch {
+    float: right;
+    margin-top:6px;
+}
+        .header-keysearch #searchFrm2 .search-txt-s {
+            float: left;
+        }
+       .header-keysearch .search-txt-s {
+           width: 91px;
+           height: 25px;
+           color: whitesmoke;
+           padding: 2px 2px 2px 5px;
+       }
+       .header-keysearch a.i {
+    width: 30px;
+    height: 32px;
+    display: inline-block;
+    border: 0.5px solid #e0e0e0;
+    border-left:none;
+    background-color: #f4f4f4;
+    float: left;
+}
+        .ico{
+            background: url("https://dig.chouti.com/images/icon.png") no-repeat 0 -196px;
+            display: inline-block;
+            width: 12px;
+            height: 15px;
+                margin-left: 11px;
+   margin-bottom: 6px;
+        }
+        .action-nav {
+    position: absolute;
+    right: 131px;
+    font-size: 12px;
+    line-height: 43px\9;
+}
+        .action-nav a{
+            padding: 0 20px;
+            font-size: 12px;
+            color: #fff;
+            /*background-color: #fff;*/
+            display: inline-block;
+        }
+        .login-btn-a:hover{
+            background-color: #800000;
+        }
+
     </style>
 </head>
 <body>
 
 <div class="header-logo">
     <div class="header-content">
-        <a href="https://dig.chouti.com/"  class="digg-logo">
+        <a href="https://dig.chouti.com/"  class="digg-logo" target="_self">
         </a>
+
+      <div class="header-action">
+      <a href="https://dig.chouti.com/all/hot/recent/1" class="tb active">全部</a>
+       <a href="https://dig.chouti.com/r/news/hot/1" class="tb">42区</a>
+        <a href="https://dig.chouti.com/r/scoff/hot/1" class="tb">段子</a>
+        <a href="https://dig.chouti.com/r/pic/hot/1" class="tb">图片</a>
+        <a href="https://dig.chouti.com/r/tec/hot/1" class="tb">挨踢1024</a>
+        <a href="https://dig.chouti.com/r/ask/hot/1" class="tb">你问我答</a>
+
+
     </div>
+    <div class="header-keysearch">
+    <form action="https://dig.chouti.com/search/show" method="post" name="searchFrm2" id="searchFrm2">
+    <input type="text" class="search-txt-s" name="words" id="txtSearch2" autocomplete="off">
+        <a href="#" class="i" name="searchBtn_2" id="searchBtn_3"><span class="ico"></span></a>
+
+        </a>
+        <input type="hidden" value="1" id="page" name="page">
+    </form>
+        </div>
+
+   <div class="action-nav">
+
+
+
+				<a href="javascript:;" class="login-btn-a" id="reg-link-a">注册</a>
+       <a href="javascript:;" class="login-btn-a" id="login-link-a">登录</a>
+
+
+
+		</div>
+
+
 </div>
 
 
