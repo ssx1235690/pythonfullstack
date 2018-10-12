@@ -43,6 +43,9 @@
             float: left;
             margin-top: 11px;
         }
+        .header-action  a.tb:hover{
+            background-color:#f5f5f5;
+        }
 .header-action {
     float: left;
     line-height: 43px\9;
@@ -106,6 +109,50 @@
         .login-btn-a:hover{
             background-color: #800000;
         }
+      .main-content-band{
+          background-color: aliceblue;
+          height: auto;
+          min-height: 600px;
+          width: 100%;
+          padding-top: 44px;
+      }
+        .main-content{
+            width:75% ;
+    margin: 0 auto;
+    overflow: hidden;
+    height: auto!important;
+    min-height: 713px;
+    padding: 6px 28px 60px;
+    background-color: #fff;
+
+        }
+        .main-content-L {
+            width: 630px;
+            height: 43px;
+            float: left;
+            overflow: hidden;
+    /*clear: both;*/
+    border-bottom: 1px solid #ccdcef;
+            padding-top: 10px;
+        }
+        .main-content-L a {
+                color: -webkit-link;
+    cursor: pointer;
+        }
+        .main-content-L #L-L {
+            float: left;
+        }
+        #L-L a.icons {
+                background: url(https://dig.chouti.com/images/tip.png?v=2.9) no-repeat 0 -299px;
+        }
+ .main-content-L #L-C {
+            float: left;
+     margin-left: 144px;
+     margin-top: 10px;
+        }
+         #publishBtn {
+            float: right;
+        }
 
     </style>
 </head>
@@ -147,6 +194,35 @@
 
 		</div>
 
+</div>
+</div>
+<!--_____________________________________header over land _______________________________________________________________-->
+<div class="main-content-band">
+
+<div class="main-content">
+
+    <div class="main-content-L">
+        <!--最新最热的和发布 头-->
+        <div id="L-L">
+            <a href="/all/hot/recent/1" hidefocus="false" class="hotbtn active icons" id="hotts-nav-btn">最热</a>
+            <a href="/all/discovery/sh/1" hidefocus="false" class="newbtn" id="newest-nav-btn">发现</a>
+            <a href="/all/man/1?sortType=time" hidefocus="false" class="personbtn" id="person-nav-btn">人类发布</a>
+
+        </div>
+        <div id="L-C">
+
+            <a href="/all/hot/recent/1" hidefocus="false" class="active hotbtn" id="sort-nav-btn">即时排序</a>
+            <a href="/all/hot/24hr/1" hidefocus="false" class="newbtn" id="sort24-nav-btn">24小时</a>
+            <a href="/all/hot/72hr/1" hidefocus="false" class="newbtn" id="sort3-nav-btn">3天</a>
+        </div>
+        <a href="javascript:;" class="publish-btn" id="publishBtn" lang="all">
+					<span class="ico n1"></span><span class="n2">发布</span>
+				</a>
+
+    </div>
+    <div class="main-content-R"></div>
+
+</div>
 
 </div>
 
