@@ -81,3 +81,4 @@ logger.info('logger info message')
 logger.warning('logger warning message')
 logger.error('logger error message')
 logger.critical('logger critical message')
+

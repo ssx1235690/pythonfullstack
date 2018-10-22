@@ -20,3 +20,6 @@ logger = logging.getLogger(__name__)
 logging.debug('this is debug message')
 logging.info('this is info message')
 logging.warning('this is warning message')
+
+
+
