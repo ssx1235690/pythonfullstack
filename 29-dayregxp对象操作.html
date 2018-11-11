@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+       <script>
+
+//RegExp对象
+    // 在表单验证时使用该对象验证用户填入的字符串是否符合规则.
+    //创建正则对象方式1  参数1 正则表达式  参数2 验证模式  g global / i 忽略大小写. //参数2一般填写g就可以，也有“gi”.
+    // 用户名 首字母必须是英文, 除了第一位其他只能是英文数字和_ . 长度最短不能少于6位 最长不能超过12位
+    //----------------------------创建方式1
+    /* var reg1 = new RegExp("^[a-zA-Z][a-zA-Z0-9_]{5,11}$","g");
+    //
+    //验证字符串
+    var str = "bc123";
+    alert(reg1.test(str));// true
+
+    //----------------------------创建方式2  /填写正则表达式/匹配模式;
+    var reg2 = /^[a-zA-Z][a-zA-Z0-9_]{5,11}$/g;
+
+    alert(reg2.test(str));// true
+     */
+    //-------------------------------正则对象的方法-------------------
+        //test方法  ==>  测试一个字符串是否复合 正则规则. 返回值是true 和false.
+
+    //-------------------------String 中与正则结合的4个方法------------------.
+    // macth search split replace
+    var str = "hello world";
+
+    //alert(str.match(/o/g)); //查找字符串中 复合正则的 内容.
+    //alert(str.search(/h/g));// 0  查找字符串中符合正则表达式的内容位置
+    //alert(str.split(/o/g)); // 按照正则表达式对字符串进行切割. 返回数组;
+    alert(str.replace(/o/g, "s")); // hells wsrld  对字符串按照正则进行替换.
+           var reg = new  RegExp("\d+",'g');
+
+
+
+
+       </script>
+</head>
+<body>
+
+</body>
+</html>
