@@ -15,6 +15,34 @@
         for (var i in  string1){
             console.log(string1[i]);
         }
+    // 数组对象的创建和基础方法
+        var song = new Array(5);
+        alert(typeof (song));
+        document.write(song);
+    //     shift  unshifit   push  pop 栈操作
+    //     栈 先进后出   队列 先进先出
+
+        var song = [1,2,3,6,5];
+        song.push(14);
+        console.log(song);
+        song.pop();
+        document.write(song);
+        song.shift();
+        song.unshift(13);
+        document.write(song);
+
+    //    shift == pop   unshift == push    shift 为左操作  pop 为右操作；
+
+
+    //    fan zhuan cao zuo
+        song.reverse();
+        document.write('<br>');
+        document.write(song);
+
+    //    拼接数组
+        var ll = song.concat([1,555]);
+        console.log(ll);
+
 
 
     </script>
