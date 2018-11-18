@@ -5,14 +5,68 @@
     <title>Title</title>
 
 
-    <script>
 
-    </script>
 
 </head>
 <body>
 <a href="http://www.cnblogs.com/yuanchenqi/articles/5980312.html"  target="_blank"> 文档</a>
 <image src="picture/DOM.png" width="500px" hight="650px"></image>
+
+<div  id="div1">
+    <div class="div2" name="liumang"> div2 inner</div>
+    <div class="div3"> div3 inner</div>
+    <p>  handsome  </p>
+</div>
+
+    <script>
+
+        // 访问 HTML 元素（节点）,访问 HTML 元素等同于访问节点,我们能够以不同的方式来访问 HTML 元素：
+        //
+        // 页面查找：
+        //
+        // 通过使用 getElementById() 方法
+        // 通过使用 getElementsByTagName() 方法
+        // 通过使用 getElementsByClassName() 方法
+        // 通过使用 getElementsByName() 方法
+
+
+
+
+
+        // var ele = document.getElementById('div1');
+        // console.log(ele.nodeName);
+        // console.log(ele.nodeType);
+        // console.log(ele.nodeValue);
+        //
+        // var eleFirst = ele.firstChild;
+        // alert(eleFirst.nodeName);
+
+        var ele3 = document.getElementsByClassName("div2");
+        //  通过 class 取得的内容是一个数组
+        var ele4 = ele3[0].nextElementSibling;
+        alert(ele4.nodeName);
+
+
+
+    //    通过 标签寻找也是一个 数组的返回值
+
+       var  ele5 = document.getElementsByTagName("p");
+       var ele6 = ele5[0].nodeName;
+       alert(ele6);
+
+       var ele7 = document.getElementsByName("liumang");
+       for (var i in ele7){
+           alert(ele7[i].innerHTML);
+       }
+
+
+    //    局部查找
+
+
+
+
+    </script>
+
 
 </body>
 </html>
