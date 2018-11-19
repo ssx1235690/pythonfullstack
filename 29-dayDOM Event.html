@@ -5,37 +5,22 @@
     <title> DOM Event</title>
 </head>
 <body>
-<div onclick="alert(123)">点我呀</div>
-<p id="abc">试一试!</p>
-
+<div >
+   <p ondblclick="alert('song')">  song song </p>
+    <input class="keyword" type="text"  onfocus="func1()" onblur="func2()" value="我爱乐乐" >
+</div>
 <script>
-    var ele=document.getElementById("abc");
+    function func1() {
+        // console.log('1110');
+        var ky = document.getElementsByClassName('keyword')[0];
+        ky.value='乐乐爱爸爸';
 
-
-    ele.onclick=function(){
-        alert("hi");
-    };
-
-</script>
-
-
-
-<div id="abc" onclick="func1(this)">事件绑定方式1</div>
-<div id="id123">事件绑定方式2</div>
-<script>
-    function func1(self){
-        console.log(self.id)
     }
-
-    //jquery下是$(self), 这种方式this参数必须填写;
-
-//------------------------------------------
-    var ele=document.getElementById("id123").onclick=function(){
-         console.log(this.id);
-        //jquery下是$(this), 这种方式不需要this参数;
+    function  func2() {
+        // console.log('2222');
+        var ky = document.getElementsByClassName('keyword')[0];
+        ky.value='乐乐爱爸爸too';
     }
-
 </script>
-
 </body>
 </html>
