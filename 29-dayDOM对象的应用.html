@@ -11,10 +11,16 @@
 <body>
 <a href="http://www.cnblogs.com/yuanchenqi/articles/5980312.html"  target="_blank"> 文档</a>
 <image src="picture/DOM.png" width="500px" hight="650px"></image>
+<image src="picture/节点导航属性.png" width="500px" hight="650px"></image>
+
 
 <div  id="div1">
     <div class="div2" name="liumang"> div2 inner</div>
-    <div class="div3"> div3 inner</div>
+    <div class="div3"> div3 inner
+    <p>
+     inner div ppppppp
+    </p>
+    </div>
     <p>  handsome  </p>
 </div>
 
@@ -28,6 +34,8 @@
         // 通过使用 getElementsByTagName() 方法
         // 通过使用 getElementsByClassName() 方法
         // 通过使用 getElementsByName() 方法
+        //  innerHTMl 表示标签内容
+
 
 
 
@@ -55,12 +63,17 @@
        alert(ele6);
 
        var ele7 = document.getElementsByName("liumang");
-       for (var i in ele7){
-           alert(ele7[i].innerHTML);
-       }
+       // for (var i in ele7){
+       //     alert(ele7[i].innerHTML);
+       // }
 
 
     //    局部查找
+        var ele8 = document.getElementsByClassName('div3')[0];
+       var ele9 = ele8.getElementsByTagName('p')[0];
+        console.log(ele9.innerHTML);
+
+
 
 
 
