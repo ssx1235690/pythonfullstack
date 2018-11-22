@@ -43,9 +43,9 @@
     }
     function  funcon() {
         var ky = document.getElementById('song');
-        console.log(ky.value);
         if ( ky.value == 'sxsong'){
             console.log(ky.value);
+            event.preventDefault();
             return false;
         }
 
