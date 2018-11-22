@@ -9,6 +9,26 @@
    <p ondblclick="alert('song')">  song song </p>
     <input class="keyword" type="text"  onfocus="func1()" onblur="func2()" value="我爱乐乐" >
 </div>
+
+
+
+<select>
+
+    <option><p>宋翔</p>    </option>
+    <option><p>阿乐乐</p>    </option>
+
+</select>
+
+<form method="get" action="29-dayDOM%20Event.html" onsubmit="funcon()"  >
+    <input type="text" value="default" name="输入信息"  id="song">
+    <input  type="submit" value="submit">
+
+</form>
+
+
+
+
+
 <script>
     function func1() {
         // console.log('1110');
@@ -20,6 +40,15 @@
         // console.log('2222');
         var ky = document.getElementsByClassName('keyword')[0];
         ky.value='乐乐爱爸爸too';
+    }
+    function  funcon() {
+        var ky = document.getElementById('song');
+        console.log(ky.value);
+        if ( ky.value == 'sxsong'){
+            console.log(ky.value);
+            return false;
+        }
+
     }
 </script>
 </body>
