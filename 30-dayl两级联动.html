@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两级联动</title>
+</head>
+<body>
+
+<select  onchange="song()">
+    <option>song</option>
+    <option>le</option>
+    <option>leleyao</option>
+    <option>xiaoyaoyao</option>
+
+</select>
+
+
+<select  id="province">
+
+
+</select>
+
+<select  id="city">
+
+
+</select>
+
+<script>
+    function  song() {
+        alert('song');
+    }
+    var data = {'Beijing':['chaoyang','yanjiao'],'Hebei':['shijiazhuang','xingtai']};
+    var pro = document.getElementById('province');
+    for i in data {
+        var kkk = document.createElement('option');
+        kkk.innerText=i;
+        pro.appendChild(kkk);
+    }
+
+</script>
+</body>
+</html>
