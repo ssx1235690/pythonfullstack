@@ -15,7 +15,7 @@
 </select>
 
 
-<select  id="province">
+<select  id="province" onchange="song1(this)">
 
 
 </select>
@@ -31,10 +31,22 @@
     }
     var data = {'Beijing':['chaoyang','yanjiao'],'Hebei':['shijiazhuang','xingtai']};
     var pro = document.getElementById('province');
-    for i in data {
+    for (i in data) {
         var kkk = document.createElement('option');
-        kkk.innerText=i;
+        kkk.innerHTML=i;
         pro.appendChild(kkk);
+    }
+    var cit = document.getElementById('city');
+        function song1(self) {
+            cit.innerText=''
+            var choice = (self.options[self.selectedIndex]).innerHTML;
+            for  (var i in data[choice]){
+ var kkk = document.createElement('option');
+            kkk.innerHTML=data[choice][];
+            cit.appendChild(kkk);
+            }
+
+
     }
 
 </script>
