@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js作用域</title>
+</head>
+<body>
+
+<script>
+    function song() {
+        var c = 'nimeifu';
+        function songinner() {
+            console.log(c);
+            }
+        return songinner();
+    }
+    var ss = song();
+    ss();
+
+</script>
+
+</body>
+</html>
