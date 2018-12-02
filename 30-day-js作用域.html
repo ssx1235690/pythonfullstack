@@ -6,16 +6,62 @@
 </head>
 <body>
 
+<!--&lt;!&ndash;作用域-->
+<!--js的作用域和py相似，if while等控制语句并没有自己作用域；而函数是有自己的作用域的；&ndash;&gt;-->
 <script>
+    var c = 'nidaye';
     function song() {
         var c = 'nimeifu';
         function songinner() {
             console.log(c);
             }
-        return songinner();
+        return songinner;
     }
     var ss = song();
     ss();
+
+// js 在执行下列语句时会有些差别和python  。python是走一行执行一行而我们的 js会对同命函数进行覆盖，很恐怖。
+
+var city = 'beijing';
+
+function func(){
+    var city = "shanghai";
+
+    function inner(){
+        // var city = "langfang";
+        console.log(city);
+    }
+
+    return inner;
+}
+
+var ret = func();
+ret();
+
+
+var city = 'beijing';
+
+function Bar(){
+    console.log(city);
+}
+
+function func(){
+
+    var city = 'shanghai';
+    return Bar;
+}
+
+var ret = func();
+ret();    //beijing
+
+
+
+    for (var i=1;i<=9;i++){
+        setTimeout(function timer() {
+            console.log(i);
+        },1000);
+    }
+
 
 </script>
 
