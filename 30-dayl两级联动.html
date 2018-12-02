@@ -37,16 +37,14 @@
         pro.appendChild(kkk);
     }
     var cit = document.getElementById('city');
-        function song1(self) {
-            cit.innerText=''
-            var choice = (self.options[self.selectedIndex]).innerHTML;
-            for  (var i in data[choice]){
- var kkk = document.createElement('option');
+    function song1(self) {
+        cit.innerText=''
+        var choice = (self.options[self.selectedIndex]).innerHTML;
+        for  (var i in data[choice]){
+            var kkk = document.createElement('option');
             kkk.innerHTML=data[choice][i];
             cit.appendChild(kkk);
-            }
-
-
+        }
     }
 
 </script>
