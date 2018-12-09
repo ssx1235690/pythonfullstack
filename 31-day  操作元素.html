@@ -2,9 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>30-dayl两级联动</title>
+    <title>31-day  操作元素</title>
+    <script  src="picture/jquery-3.3.1.js"></script>
 </head>
 <body>
+   <button onclick="selectall();">全选</button>
+     <button onclick="cancel();">取消</button>
+     <button onclick="reverse();">反选</button>
+
+     <table border="1">
+         <tr>
+             <td><input type="checkbox"></td>
+             <td>111</td>
+         </tr>
+         <tr>
+             <td><input type="checkbox"></td>
+             <td>222</td>
+         </tr>
+         <tr>
+             <td><input type="checkbox"></td>
+             <td>333</td>
+         </tr>
+         <tr>
+             <td><input type="checkbox"></td>
+             <td>444</td>
+         </tr>
+     </table>
+
+<script>
+    // $("table tr").each(function () {
+    //     console.log($(this).html());
+    //
+    // })
+
+    // 表单在jquery中有一个简写形式  如下：
+
+    function selectall() {
+        $("table :checkbox").each(function () {
+            $(this).prop("checked","true");
+
+            }
+        )
+
+    }
+
+
+
+    function cancel() {
+        $("table :checkbox").each(function () {
+            $(this).removeProp("checked");
+
+            }
+        )
+
+    }
+
+</script>
 
 </body>
 </html>
