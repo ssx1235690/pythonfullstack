@@ -66,9 +66,77 @@ Func();
 
 
     //                                    四、JavaScript的作用域链执行前已创建
+// JavaScript的作用域在被执行之前已经创建，日后再去执行时只需要按照作用域链去寻找即可。
+// 示例一：
+        xo = 'alex';
+
+function Func(){
+    var xo = "seven";
+    function inner(){
+
+        console.log(xo);
+    }
+    return inner;
+}
+
+var ret = Func();
+ret();
+// 输出结果： seven
+
+//     上述代码，在函数被调用之前作用域链已经存在：
+//
+// 全局作用域 -> Func函数作用域 -> inner函数作用域
+// 当执行【ret();】时，由于其代指的是inner函数，此函数的作用域链在执行之前已经被定义为：全局作用域 -> Func函数作用域 -> inner函数作用域，所以，在执行【ret();】时，会根据已经存在的作用域链去寻找变量。
+
+// 示例二：
+
+    xo = 'alex';
+
+function Func(){
+    var xo = "eirc";
+    function inner(){
+
+        console.log(xo);
+    }
 
 
+    xo = 'seven';
+    return inner;
 
+}
+
+var ret = Func();
+ret();
+// 输出结果： seven
+// 示例三：
+
+//     xo = 'alex';<br>
+// function Bar(){
+//     console.log(xo);
+// }
+//
+// function Func(){
+//     var xo = "seven";
+//
+//     return Bar;
+// }
+//
+// var ret = Func();
+// ret();
+// 输出结果： alex
+
+    //
+    //
+    //
+    //
+    function Foo(){
+    console.log(xo);
+    var xo = 'seven';
+}
+
+Foo();
+// 输出：undefined                                      五、声明提前
+// 上述代码，不报错而是输出 undefined，其原因是：JavaScript的函数在被执行之前，会将其中的变量全部声明，而不赋值。所以，相当于上述实例中，函数在“预编译”时，已经执行了var xo；所以上述代码中输出的是undefined。
 
 </script>
 </body>
