@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hadoop</title>
+    <script src="picture/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+
+
+<p onclick="alert('hello direct')">直接用alter</p>
+<p onclick="func1(this)">func 调用 alter</p>
+<p id="xi">document  寻找 alter</p>
+
+
+
+<ul>
+
+    <li>111</li>
+    <li>222</li>
+    <li>333</li>
+    <li>444</li>
+    <li>555</li>
+
+</ul>
+<script>
+
+    $("p").css("color","red");
+    $("#xi").click(function () {
+        alert('song jQuery xi');
+    })
+
+    // $("#xi").click(alert("fuck"));
+
+    function add() {
+        $("ul").append("<li>555</li>")
+    }
+       $("ul  li").click(add);
+    //    $("ul  li").click(function () {
+    //     alert('song jQuery xi  ul li');
+    //     alert('song jQuery xi  ul li');
+    // })
+
+
+
+    function func1(self) {
+        alert('hello func1');
+
+    }
+    // var song=document.getElementById('xi');
+    // console.log(song);
+    // song.onclick=function () {
+    //     alert('hello dom xi');
+    // }
+
+</script>
+</body>
+</html>
