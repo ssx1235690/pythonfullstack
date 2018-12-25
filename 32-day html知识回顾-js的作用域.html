@@ -6,11 +6,67 @@
 </head>
 <body>
 <script>
-    func();
-    function func(){
-  console.log(song);
-  var song = 33;
+    //                               一、“JavaScript中无块级作用域”
+// 在Java或C#中存在块级作用域，即：大括号也是一个作用域。
+//
+//
+//     public static void main ()
+// {
+//     if(1==1){
+//         String name = "seven";
+//     }
+//     System.out.println(name);
+// }
+// // 报错
+//     在JavaScript语言中无块级作用域
+function Main(){
+    if(1==1){
+        var name = 'seven';
+    }
+    console.log(name);
 }
+Main()
+// 输出： seven
+
+
+    //                      二、JavaScript采用函数作用域
+
+
+    // 在JavaScript中每个函数作为一个作用域，在外部无法访问内部作用域中的变量。
+
+    function Main(){
+    var innerValue = 'seven';
+}
+
+Main();
+
+// console.log(innerValue);
+// 报错：Uncaught ReferenceError: innerValue is not defined
+
+
+    //                      三、JavaScript的作用域链
+
+// 由于JavaScript中的每个函数作为一个作用域，如果出现函数嵌套函数，则就会出现作用域链。
+xo = 'alex';
+
+function Func(){
+    var xo = "seven";
+    function inner(){
+        var xo = 'alvin';
+        console.log(xo);
+    }
+    inner();
+}
+Func();
+// 如上述代码则出现三个作用域组成的作用域链，如果出现作用域链后，那么寻找变量时候就会出现顺序，对于上述实例：
+
+// 当执行console.log(xo)时，其寻找顺序为根据作用域链从内到外的优先级寻找，如果内层没有就逐步向上找，直到没找到抛出异常。
+
+
+
+
+    //                                    四、JavaScript的作用域链执行前已创建
+
 
 
 
