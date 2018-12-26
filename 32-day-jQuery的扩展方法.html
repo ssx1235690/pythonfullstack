@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xxxxxxx</title>
+
+    <script  src="picture/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+<p> who is my son ?</p>
+<script>
+    $.extend({
+        getmax:function (a,b) {
+            return a>b?a:b;
+
+        }
+    });
+
+     var song=$.getmax(11,44);
+     alert(song);
+
+
+     $.fn.extend({
+         print:function () {
+             console.log('lelege')
+
+         }
+     });
+
+     $("p").print();
+
+</script>
+
+
+</body>
+</html>
