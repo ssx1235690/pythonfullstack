@@ -5,7 +5,7 @@ class recieve():
         self.credentials = pika.PlainCredentials('mytest', 'mytest')
         self.connection = pika.BlockingConnection(pika.ConnectionParameters(host='192.168.157.132',credentials=self.credentials))
         self.channel = self.connection.channel()
-        self.channel.queue_declare(queue=que_nam)
+        self.channel.queue_declare(queue=que_nam,durable=True)
 
     def callback(self,ch, method, properties, body):
         print(" [x] Received %r" % body)
