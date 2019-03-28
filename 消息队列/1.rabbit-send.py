@@ -12,16 +12,17 @@ class send():
                               body=msgj,
                                properties=pika.BasicProperties(delivery_mode=2)
                                        )
-        print(" [x] Sent %s" %msgj)
-        time.sleep(0.5)
+            time.sleep(0.5)
+            print(" [x] Sent %s" %msgj)
     def lll(self):
         li=[]
         for i in range(1,1000):
             th=threading.Thread(target=self.action())
             th.start()
             li.append(th)
-        for i in li:
-            i.join()
+        # for i in li:
+        #     i.join()
+        ( i.join() for i in li)
         # connection.close()
 song=send()
 song.lll()
