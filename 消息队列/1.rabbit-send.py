@@ -10,8 +10,6 @@ class send():
         print(thread_num)
         while True:
             try:
-                self.connection = pika.BlockingConnection(
-                    pika.ConnectionParameters(host='192.168.157.132', credentials=self.credentials))
                 self.channel = self.connection.channel()
                 self.channel.queue_declare(queue=que_nam, durable=True)  # 只是指出队列持久化
                 self.channel.basic_publish(exchange='',
@@ -22,7 +20,7 @@ class send():
             except BaseException as e:
                 print(e)
             print(" [x] Sent %s" %msgj)
-            time.sleep(0.001)
+            time.sleep(0.1)
     def lll(self):
         li=[]
         for i in range(1,10):
