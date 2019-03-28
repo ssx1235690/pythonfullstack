@@ -18,7 +18,7 @@ class send():
             except BaseException as e:
                 print(e)
             print(" [x] Sent %s %d" %(msgj,thread_num))
-            # time.sleep(0.001)
+            time.sleep(3)
     def lll(self):
         li=[]
         for i in range(1,2):
