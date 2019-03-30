@@ -12,10 +12,11 @@ print(a)
 
 a = [ x*x for x in range(10) ]
 print(a)
-
+print(x * x for x in range(1,8))
 def foo(x):
     return x * x
 a = [ foo(x) for x in range(10) ]
+
 print(a)
 #####python的赋值方式#####
 t = [1,2]

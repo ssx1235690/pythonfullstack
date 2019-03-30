@@ -53,3 +53,136 @@ print("123".zfill(100))             #不够100个数字，前面就用0来填充
 
 print("祝各位身体健康", end=' ')    #不换行
 print("！")
+
+song='   lele is a lovely son, forver lovely !  '
+# 1.查找 字符
+print(song.find('e'))
+print(song.find('e',0,len(song)))
+
+# 2.切片操作
+print(song[1:2])
+print(song[:2])
+print(song[2:])
+print(song[-1:-5])
+
+#3 .字符串相加
+# 和Java中的字符串一样，不能直接改变字符串的值，更新字符串时候可以用切片技术
+
+song1 = 'lele' + song[12:19]
+print(song1)
+
+# 4. 将字符串第一个字符大写
+print(song.strip().capitalize())
+
+# 5.将整个字符串小写
+
+song.casefold()
+
+# 6. 字符串居中
+
+print(song.center(25))
+
+# 7.count（sub[,start[,end]]）:sub从start到end出现的次数（默认是整个字符串）
+
+print(song.count('e'))
+
+# 8. endswith（sub）判断是否是以哪个字符串结尾
+
+print(song.endswith(' '))
+
+# 9.isalnum（）:判断s是否是数字或者字母
+print(song.isalnum())
+
+# 10. isspace（）：判断是否是空格
+print(song.isspace())
+
+# 11. isdigit（）：判断是否都是数字组成
+
+print(song.isdigit())
+
+# 12.isalpha（）：判断是否都是由字母组成的
+
+print(song.isalpha())
+
+# 13.islower（）：判断是否都是由小写字母组成的
+
+print(song.islower())
+
+# 14.istitle（）：判断是否是标题形式字符串（即是连续字符串只有第一个字母大写，其他都是小写，若是有空格，则每个分隔的字符串都满足此）
+
+print(song.istitle())
+
+# 15 isupper（）：判断是否都是由大写字母组成的
+
+print(song.isupper())
+
+# 16. join（sub）
+
+print(song.join('++'))
+
+
+# 17. lstrip（）：去掉字符串左边所有空格
+
+print(song.lstrip(''))
+
+# 18.rstrip（）：去掉字符串右边的空格
+
+print(song.rstrip())
+# 19. replace（old,[,new][,count]）:将字符串中的old子串替换为new，替换count次
+
+print(song.replace('lele','leleyao'))
+print(song.replace('leleyao','lele'))
+
+# 20.rfind（sub[,start][,end]）:从右边开始查找字符串中子串从start到end出现的位置并返回下标（注意start和end是从左往右的，返回的也是从左到右的位置。）
+
+song.rfind('lele')
+
+
+# 21.split（sep）：将字符串用给定的标准分割，并且以列表形式返回分割后的元素组
+
+print(song.split(' '))
+
+
+# 22.startwith（sub[,start][,end]）:判断从start到end是否以sub开头
+
+print(song.startswith('lele'))
+
+# 23. strip（）：去掉字符串左右两边的空格
+
+print(song.strip())
+
+# 24.swapcase（）：将字符串的大小写反转
+
+print(song.swapcase())
+
+# 25. title（）将字符串标题化（即是连续字符串的第一个字母大写，其他都是小写空格，分隔的字符串都遵循此规则）
+
+print(song.title())
+
+# 26 translate    转换
+
+print(song.maketrans('s','b'))
+
+# print(song.translate())
+
+# 27.upper（）：将整个字符串都大写
+
+print(song.upper())
+
+
+# 28.zfill（width）：用'0'来填充不够的空格（是从左边开始填充）
+
+print(song.zfill(55))
+
+# 29.lower（）：将整个字符串都小写
+
+song.lower()
+
+
+# 30. 格式化
+
+print('%d' %(2))
+
+# 31. format()
+'{0} love {1}{2}'.format('I','my','home')
+'{a} love {b} {c}'.format(a='I',b='my',c='home')
