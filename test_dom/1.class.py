@@ -31,18 +31,18 @@ class lele(song):
         print(cls.xxxxx)
     @property         #把一个方法变成一个静态属性
     def  fun3_propp(self):
-        print('xxxx',self.propp_song)
+        print('xxxx',self.__propp_song)
     @fun3_propp.setter
-    def propp_setter(self,song):
+    def propp(self,song):
         print(song)
-        self.propp_song = song
+        self.__propp_song = song
 
 
 
 
 l1 = song()
 l2 = lele()
-l2.propp_setter='sdfsdfsdfs'
+l2.propp='sdfsdfsdfs'
 l2.fun3_propp
 
 
