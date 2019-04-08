@@ -4,6 +4,8 @@
 # @Email   : ......998@qq.com
 # @File    : 1.class.py
 
+from os import system
+import json
 
 class song():
     _xxx = 123
@@ -33,16 +35,46 @@ class lele(song):
     def  fun3_propp(self):
         print('xxxx',self.__propp_song)
     @fun3_propp.setter
-    def propp(self,song):
+    def propp(self,arg1):
         print(song)
-        self.__propp_song = song
+        self.__propp_song = arg1
 
 
 
 
 l1 = song()
 l2 = lele()
-l2.propp='sdfsdfsdfs'
+l2.propp='kjhkjhjkhj'
 l2.fun3_propp
 
 
+print('''
+# 特殊的类变量
+''')
+
+
+# print(dir(system))
+class Base(object):
+    def test(self):
+        print()
+
+
+class A(Base):
+    def test(self):
+        print("------------A")
+
+
+class B(Base):
+    def test(self):
+        print("------------B")
+
+
+class C(A, B):
+    pass
+    # def test(self):
+    #    print("------------C")
+
+
+c = C()
+c.test()
+print(C.__mro__)

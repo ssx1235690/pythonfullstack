@@ -9,7 +9,7 @@
 # 普通字段属于对象
 # 静态字段属于类
 # 对象可以找到类，反之类无法找到对象。
-class province:
+class province():
     #静态
     country = '中国'
     def __init__(self):
@@ -18,6 +18,7 @@ class province:
 # xintai = province('邢台')
 xintai = province()
 print(xintai.name)
+print(xintai.country)
 print(province.country)
 
 #
