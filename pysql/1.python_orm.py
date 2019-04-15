@@ -14,7 +14,7 @@ from sqlalchemy import Column, Integer, String
 
 print(sqlalchemy)
 ### 建立连接
-engine_mariadb = create_engine("mysql://root@192.168.157.132/test",echo=True)
+engine_mariadb = create_engine("mysql://root@192.168.157.132/test",echo=True,encoding='utf8')
 print(type(engine_mariadb))
 Base = declarative_base()
 
