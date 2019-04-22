@@ -23,6 +23,11 @@ host_m2m_remote_user = Table('host_m2m_remote_user',Base.metadata,
                              Column('remote_user_id',Integer,ForeignKey('remote_user.id'))
                              )
 
+host_m2m_group = Table('host_m2m_group',Base.metadata,
+                             Column('host_id',Integer,ForeignKey('host.id')),
+                             Column('group_id',Integer,ForeignKey('host_group.id'))
+                             )
+
 class Host(Base):
     __tablename__ = 'Host'
     id = Column(Integer,primary_key=True)
@@ -40,7 +45,7 @@ class Host_group(Base):
     groupname = Column(String(64),unique=True)
     host_id = Column(Integer,ForeignKey(Host.id))
     host =  relationship('Host',backref='host_group')
-    remote_users = relationship('remote_user',host_m2m_remote_user,backref='hosts')
+    remote_users = relationship('remote_user', host_m2m_group, backref='group')
     def __repr__(self):
         return 'hostname:{0}'.format(self.groupname)
 
