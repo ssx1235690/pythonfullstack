@@ -31,7 +31,18 @@ class Host(Base):
     port = Column(Integer)
     remote_users = relationship('remote_user',host_m2m_remote_user,backref='hosts')
     def __repr__(self):
-        return 'hostname: {1}, ip {2}, port: {3}'.format(self.hostname,self.ip,self.port)
+        return 'hostname: {0}, ip {1}, port: {2}'.format(self.hostname,self.ip,self.port)
+
+
+class Host_group(Base):
+    __tablename__ = 'Host_group'
+    id = Column(Integer,primary_key=True)
+    groupname = Column(String(64),unique=True)
+    host_id = Column(Integer,ForeignKey(Host.id))
+    host =  relationship('Host',backref='host_group')
+    remote_users = relationship('remote_user',host_m2m_remote_user,backref='hosts')
+    def __repr__(self):
+        return 'hostname:{0}'.format(self.groupname)
 
 class Remote_user(Base):
     __tablename__ = 'Remote_user'
@@ -41,7 +52,7 @@ class Remote_user(Base):
     auth_type = Column(Enum(0,1))
     __table_args__ = (UniqueConstraint('username','password','auth_type',name='sssssss'))
     def __repr__(self):
-        return 'username: {1}, password {2}'.format(self.username,self.password)
+        return 'username: {0}, password {1}'.format(self.username,self.password)
 
 
 class User_profile(Base):
@@ -51,5 +62,5 @@ class User_profile(Base):
     password = Column(String(64))
 
     def __repr__(self):
-        return 'username: {1}'.format(self.username)
+        return 'username: {0}'.format(self.username)
 
