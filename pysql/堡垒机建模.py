@@ -110,7 +110,7 @@ class UserProfile(Base):
 
 if __name__ == "__main__":
 
-    Base.metadata.create_all(setting.engine_mariadb)  # 创建表结构
+    Base.metadata.create_all(mysql_engine)  # 创建表结构
 
 
 
