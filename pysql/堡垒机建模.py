@@ -11,6 +11,7 @@ import pymysql
 pymysql.install_as_MySQLdb()
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column,Enum, Integer, String,ForeignKey,UniqueConstraint
+from sqlalchemy_utils import ChoiceType
 import sys
 from  sqlalchemy.orm import  relationship
 print(sys.path)
