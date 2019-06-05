@@ -6,3 +6,11 @@
 
 # python 的简便只提供  while  和 for 两种循环  （没有 case）
 
+
+def song(i):
+    while i > 5:
+        yield  i
+        i -= 1
+
+
+
