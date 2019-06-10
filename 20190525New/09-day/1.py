@@ -10,7 +10,8 @@ num = int(num)
 flag = 10
 wei = 0
 while num > 1 :
+    print(num%10)
     num = num // 10
     wei += 1
 else:
-    print(wei)
+    print(wei,'位数')
