@@ -25,3 +25,6 @@ for i in range(1,10):
         else:
             print('{} {} {}'.format(' ', ' ', '  '), end='\t', sep=' ')
     print()
+
+
+

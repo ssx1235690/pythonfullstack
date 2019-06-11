@@ -19,3 +19,14 @@ def fbnc(num):
 
 
 print(fbnc(5))
+
+################猴子吃桃问题
+
+def peach(num):
+    if num == 10:
+        return 1
+    elif 1<= num <10:
+        return (peach(num+1)+ 1)*2
+    else:
+        return 'error'
+print(peach(1))
