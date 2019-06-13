@@ -22,6 +22,7 @@ for i in range(1,10):
             # s = str(i)+'*'+str(j)+'='+str(i*j)
             # print(s,end=' ',sep='\t')
             print('{}*{}={}'.format(i,j,i*j),end='\t',sep=' ')
+            # print('{:<2}*{:<2}={:<2}'.format(i,j,i*j),end='\t')
         else:
             print('{} {} {}'.format(' ', ' ', '  '), end='\t', sep=' ')
     print()
