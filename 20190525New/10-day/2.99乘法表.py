@@ -29,3 +29,16 @@ for i in range(1,10):
 
 
 
+
+
+############################################
+
+
+
+
+for i in range(1,10):
+    s = ""
+    for j in range(1,10):
+        if i <=j:
+            s += '{}*{}={:<{}}'.format(i,j,i*j,2 if j<4 else 3)
+    print('{:>60}'.format(s))
