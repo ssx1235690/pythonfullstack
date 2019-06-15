@@ -1,10 +1,8 @@
 import pika,time,threading
 class send():
     def __init__(self,que_nam='hello'):
-        # self.credentials = pika.PlainCredentials('mytest', 'mytest')
-        self.credentials = pika.PlainCredentials('guest', 'guest')
-        # self.connection = pika.BlockingConnection(pika.ConnectionParameters(host='192.168.157.132',credentials=self.credentials))
-        self.connection = pika.BlockingConnection(pika.ConnectionParameters(host='11.11.136.141',credentials=self.credentials))
+        self.credentials = pika.PlainCredentials('mytest', 'mytest')
+        self.connection = pika.BlockingConnection(pika.ConnectionParameters(host='192.168.157.132',credentials=self.credentials))
     def action(self,thread_num,msgj='ndyd 996'):
         que_nam='hello'
         print(thread_num)
