@@ -57,3 +57,4 @@ if  type('sdfsf')  == str :
 # if isinstance(123,str):
 if isinstance(123,(str,int)):
     print('ok str')
+
