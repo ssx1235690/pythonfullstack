@@ -35,8 +35,13 @@ print(b)
 
 # clear 清空列表 ， 频繁释放 内存空间受影响
 
-b.clear()
+# b.clear()
 
 # reverse 反转
 
 b.reverse()
+
+
+# sort 方法 就地修改  key传递对value 的处理函数  可以是 类型转换的  str  int  etc..
+
+print(b.sort(key=str))
