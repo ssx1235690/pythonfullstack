@@ -33,6 +33,8 @@ import math
 
 
 import sys
+import time
+times1= time.time()
 sys.setrecursionlimit(100000)
 def genlist(listx):
     listsum = [1,1]
@@ -56,7 +58,22 @@ for i in range(1,num+1):
     for j in sanjiao(i):
         print(j,end='   ')
     print()
-print(sum)
 
 
+##### 迭代法
 
+print([1])
+print([1,1])
+
+pre = [1,1]
+
+num = int(input('需要打印几行杨辉： '))
+
+for i in range(num-2):
+    new = [1]
+    for i in range(len(pre)-1):
+        new.append(pre[i]+pre[i+1])
+    else:
+        new.append(1)
+    print(new)
+    pre = new
