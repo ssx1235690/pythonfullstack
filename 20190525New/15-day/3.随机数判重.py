@@ -7,7 +7,7 @@
 import random
 
 enums = []
-for i in range(2):
+for i in range(30):
 
     enums.append(random.randrange(21))
 
@@ -26,7 +26,6 @@ for i in range(len(enums)):
         if state[j] == 1:
             continue
         if enums[i] == enums[j]:
-            state[i] = 1
             state[j] = 1
             Flag = True
     if Flag:
