@@ -22,7 +22,7 @@ for i in range(len(enums)):
     Flag = False
     if state[i]  == 1:
         continue
-    for j in  range(i,len(enums)):
+    for j in  range(i+1,len(enums)):
         if state[j] == 1:
             continue
         if enums[i] == enums[j]:
