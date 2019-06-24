@@ -16,14 +16,33 @@ import  random
 
 list1 = [random.randint(1,155) for i in range(20)]
 print(list1)
+#
+# for i in range(len(list1)):
+#     min = i
+#     for j in range(i+1,len(list1)):
+#         if list1[j] < list1[min]:
+#             min = j
+#     if min != i:
+#         tmp = list1[i]
+#         list1[i] = list1[min]
+#         list1[min] = tmp
+# print(list1)
 
-for i in range(len(list1)):
+# 二元法同时找到最大最小值
+for i in range(len(list1)//2+1):
     min = i
-    for j in range(i+1,len(list1)):
+    max = -i -1
+    for j in range(i+1,len(list1)-i):
         if list1[j] < list1[min]:
             min = j
+        if list1[j] > list1[max]:
+            max = j
     if min != i:
         tmp = list1[i]
         list1[i] = list1[min]
         list1[min] = tmp
+    if max != -i-1:
+        tmp = list1[-i -1]
+        list1[-i -1] = list1[max]
+        list1[max] = tmp
 print(list1)
