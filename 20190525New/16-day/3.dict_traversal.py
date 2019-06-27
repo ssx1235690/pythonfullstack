@@ -31,3 +31,31 @@ print(song)
 #### 缺省字典
 
 
+import  random
+from collections import defaultdict
+
+d = {}
+d= defaultdict(list)
+for i in 'abcdef':
+    for j in range(random.randint(1,5)):
+        # if not d.get(i):
+        #     d[i] = []
+
+        d[i].append(j)
+print(type(d))
+print(d)
+
+
+
+##### 有序字典
+
+
+from collections import OrderedDict
+
+ll = OrderedDict(a=1,b=2)
+print(ll)
+
+
+
+
+sorted({'a': [0, 1], 'b': [0, 1, 2, 3], 'c': [0, 1], 'd': [0, 1, 2, 3], 'e': [0, 1], 'f': [0, 1, 2, 3, 4]}.items(),key=lambda x:x[1])
