@@ -2,7 +2,7 @@
 # @Time    : 2019/6/24 22:08
 # @Author  : songxy
 # @Email   : 2953xx998@qq.com
-# @File    : 2.dict.py
+# @File    : 2.dict_define.py
 
 
 song = dict(a=1,b=3,c=123)
@@ -34,3 +34,5 @@ print(song)
 # popitem  返回一个封装
 
 print(song.popitem())
+
+
