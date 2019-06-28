@@ -7,5 +7,6 @@
 import datetime
 
 print(datetime.time())
+print(datetime.datetime)
 
 
