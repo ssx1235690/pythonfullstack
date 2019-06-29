@@ -52,3 +52,9 @@ song(**{'sdf':123,'sdfasdf':234})
 # song(**{'sdf':123,'sdfasdf':234})
 #
 # TypeError: song() got an unexpected keyword argument 'sdf'
+
+
+
+# 解构符号  在print 函数中的使用  ，虽然format 功能强大，但是这样的写法我们也要能理解
+
+print(*[1,234,53453])
