@@ -14,3 +14,9 @@ print((lambda x:x**2)(11))
 
 ll =lambda x:x**2
 print(ll(23))
+
+
+lambda :0
+lambda  x,y=5:x+y
+print((lambda x,*,y=15:x+y)(5,y=22))
+
