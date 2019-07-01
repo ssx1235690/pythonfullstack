@@ -27,3 +27,30 @@ print(f1())
 print(f1())
 print(f1())
 print(f2())
+
+
+#### 三大高阶函数  sorted  filter  map
+def sort_self(iter,reverse=True,key=lambda x,y: x<y):
+    ret = []
+    for x in iter:
+        for i,y in enumerate(ret):
+            if  key(x,y) != reverse:
+                ret.insert(i,x)
+                break
+        else:
+            ret.append(x)
+    return ret
+
+print(sort_self([8,7,6,5,3,4,1,2],reverse=False))
+
+
+ll = filter(lambda x:x>5,[8,7,6,5,3,4,1,2])
+for i in ll:
+    print(i)
+
+
+
+ll = map(lambda x:x//2+2,[8,7,6,5,3,4,1,2])
+
+for i in ll:
+    print(i)
