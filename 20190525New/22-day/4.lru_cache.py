@@ -7,7 +7,8 @@
 
 from  functools import lru_cache
 import time
-
+import sys
+sys.setrecursionlimit(100000)
 
 ##### 缓存命令将结果直接返回，不会重复执行函数进行压栈
 
@@ -20,4 +21,15 @@ print(add(5,6))
 print(add(5.0,6))
 print(add(5,6.0))
 print(add(5,7))
-print(add(5,7,z=6))
+print(add(5,7,z=1))
+
+
+@lru_cache(maxsize=20)
+def fn(x):
+    if x == 1 or x ==2 :
+         return 1
+    else:
+        return fn(x-1) + fn(x-2)
+
+
+print(fn(600))
