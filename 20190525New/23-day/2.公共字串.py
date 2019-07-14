@@ -7,8 +7,8 @@
 
 # 求最长公共字串
 
-s1 = 'asdfhauiwjbabcdfvbaiuasdfaskjdfnlhafnsjknfjkaiweasd,fnkanfkkafsefd'
-s2 = 'aklsnfuinvjasdfkkalksnfoefnasdkfnasdfxnuabcihvuzcjkniewu'
+s1 = 'asdfhauiwjbabcdfvbaiuasdfaskjdfnlhafnsjxffgsdfsdfknfjkaiweasd,fnkanfkkafsefd'
+s2 = 'aklsnfuinvjasdfkkalksnfoefnasdkfnasdfxnusdfsdfsdfsdfabcihvuzcjkniewu'
 
 
 
