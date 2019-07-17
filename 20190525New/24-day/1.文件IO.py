@@ -19,8 +19,9 @@
 song = open('song.txt','r+',encoding='utf8')
 print(song.read(2))
 print(song.tell())
-song.seek(4,0)
+# song.seek(4,0)
 print(song.read(1))
+song.close()
 
 ############# 文本模式打开的情况下
 # seek  有两个参数 a b  a是偏移量   b是位置参数   0开头  1相对于当前  2尾   b=1 时a只能 0
@@ -34,9 +35,34 @@ print(song.read(1))
 #
 #  seek  有两个参数 a b  a是偏移量   b是位置参数   0开头  1相对于当前  2尾
 # b = 0  a 只能是整数   其余可正可负
+# tell 返回字节数
+
+song = open('song.txt','rb',buffering=1)
+print(song.read(3).decode())
+print(song.tell())
+# song.seek(6,0)
+# print(song.read(3).decode())
+song.close()
 
 
+########### 缓冲区   buffering     flush 函数
 
+
+# 缓冲分三种：
+# 全缓冲 : open函数的buffering设置大于1的整数n,n为缓冲区大小，linux默认为page的大小4096 满了n 个字节才会写入磁盘 。
+#
+# f=open(“demo.txt”,’w’,buffering=1)
+# 1
+# 行缓冲 : open 函数的buffering设置为1, 碰到换行就会将缓冲区的写入磁盘。
+#
+# f=open(“demo.txt”,’w’,buffering=1)
+# 1
+# 无缓冲 : open 函数的buffering设置为0 有输入就写入磁盘。
+#
+# f=open(“demo.txt”,’w,’,buffering=0)
+
+
+################## 文件编码
 
 
 
