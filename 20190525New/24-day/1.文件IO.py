@@ -80,3 +80,33 @@ song.write('a\r,slkdjfkl\r\n,slkjdjhfkljasdlf\n')
 print(song.fileno())
 song.close()
 
+
+
+################ 文件上下文关系
+
+
+song = open('song.txt','r+')
+print(song.seekable())
+print(song.writable())
+print(song.readable())
+song.close()
+
+# try:
+#     pass
+#
+# except ValueError as e:
+#     pass
+#
+# except Exception as e:
+#     pass
+#
+# else:
+#     pass
+#
+# finally:
+#     pass
+
+#
+# 操作文件出错 导致文件 无法close
+# 可以使用 try  finaly 方式解决
+#     但是python 提供一个更好的方式   with 语句
