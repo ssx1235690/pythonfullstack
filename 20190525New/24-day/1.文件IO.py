@@ -65,4 +65,18 @@ song.close()
 ################## 文件编码
 
 
+# unicode 万国码   -----> utf-8
+song  = '拉萨可见度分厘卡机'
+song = song.encode(encoding='utf-8')
+print(song)
+print(song.decode(encoding='utf8'))
+
+song = open('song.txt','w+',encoding='gbk')
+############# 换行
+song.write('a\r,slkdjfkl\r\n,slkjdjhfkljasdlf\n')
+
+################### 文件描述符
+
+print(song.fileno())
+song.close()
 
