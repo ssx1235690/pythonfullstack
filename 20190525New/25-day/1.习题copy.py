@@ -8,7 +8,7 @@
 src = 'song1.txt'
 dest = 'song2.txt'
 
-xx = open(src,'w',encoding='utf8')
+xx = open(src,'a+',encoding='utf8')
 xx.write('卢卡斯京东方垃圾但是覅爱哦二级覅哦算法ja')
 xx.close()
 
