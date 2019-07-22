@@ -14,3 +14,13 @@ print(os.name)  # windows nt   linux   posix
 # print(os.uname())#AttributeError: module 'os' has no attribute 'uname'
 
 print(sys.platform)
+
+
+####  shell  util 模块
+
+
+#  copy 方法
+shutil.copy('song1.txt','song2.txt')
+shutil.copyfile('song1.txt','song2.txt')
+shutil.copymode('song1.txt','song2.txt')
+#
