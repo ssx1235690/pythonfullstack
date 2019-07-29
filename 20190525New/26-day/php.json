@@ -1,0 +1,20 @@
+{
+    "DEFAULT": {},
+    "MSSQL": {
+        "mssql.allow_persistent": "On",
+        "mssql.max_persistent": "-1",
+        "mssql.max_links": "-1",
+        "mssql.min_error_severity": "10",
+        "mssql.min_message_severity": "10",
+        "mssql.compatibility_mode": "Off",
+        "mssql.secure_connection": "Off"
+    },
+    "Assertion": {},
+    "COM": {},
+    "mbstring": {},
+    "gd": {},
+    "exif": {},
+    "Tidy": {
+        "tidy.clean_output": "Off"
+    }
+}
