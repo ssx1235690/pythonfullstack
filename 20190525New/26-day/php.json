@@ -16,5 +16,18 @@
     "exif": {},
     "Tidy": {
         "tidy.clean_output": "Off"
+    },
+    "flask": {
+        "debug": "1"
+    },
+    "common": {
+        "a": "1",
+        "b": "0"
+    },
+    "dev": {
+        "b": "2"
+    },
+    "prod": {
+        "b": "3"
     }
 }

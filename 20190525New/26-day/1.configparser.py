@@ -15,6 +15,7 @@ cfg.read(src)
 
 d = {}
 for k,v in  cfg.items():
+    print(k,v,type(v))
     d[k] = dict(cfg.items(k))
 print(d)
 import  json
@@ -22,3 +23,4 @@ import  json
 
 with open(dst,'w') as song:
     json.dump(d,song,indent=4)
+
