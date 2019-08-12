@@ -9,3 +9,14 @@ import pickle
 song = 'a'
 with open('song.txt','wb') as xxx:
     xxx.write(pickle.dumps(song))
+
+
+class song():
+    def __init__(self):
+        self.son = 'lele'
+        self.name = 'xiang'
+    def sing(self):
+        return self.name + self.son
+
+with open('song.txt','wb+') as xxx:
+    xxx.write(pickle.dumps(song()))
