@@ -20,3 +20,19 @@ class song():
 
 with open('song.txt','wb+') as xxx:
     xxx.write(pickle.dumps(song()))
+
+
+
+print(pickle.DEFAULT_PROTOCOL)
+class Foo(str):
+    attr = 'A class attribute'
+    print(123)
+    def xxx(self):
+        self.xxxxx = 123
+    def ok(self):
+        print(self.xxxxx)
+
+picklestring = pickle.dumps(Foo())
+
+
+print(picklestring)
