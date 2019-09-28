@@ -29,7 +29,7 @@ Well now that your gone, the world is ours.
 Well you thought of straight solutions
 that I liked the attention
 And not always knowing the answers
-You’re gonna lose it
+You’re gonna lose it 
 You’re gonna lose it
 I’ll stop the whole world, I’ll stop the whole world
 From turning into a monster, and eating us alive
@@ -39,6 +39,7 @@ Well now that your gone, the world is ours
 
 word_dict = {}
 def makekeys(strxx):
+    strxx = strxx.lower()
     flag = 0
     for i in range(len(strxx)):
 
