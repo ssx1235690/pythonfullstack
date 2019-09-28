@@ -17,32 +17,43 @@ The company and its underwriter will confirm the IPO date and publish its prospe
 
 The SSE STAR Market, inaugurated on June 13 and designed to focus on companies in the high-tech and strategic emerging sectors, will ease the listing criteria, such as allowing firms that have yet to make a profit to list, but they will adopt higher requirements for information disclosure.
 '''
-flag = 0
+
 word_dict = {}
 def makekeys(strxx):
+    flag = 0
     for i in range(len(strxx)):
 
         if flag == 0:
             start = i
 
-        if i == 0 or re.match('\w',strxx[i]):
+        if  re.match('\w',strxx[i]):
+            flag = 1
             continue
         elif  re.match('\W',strxx[i]) and re.match('\w',strxx[i-1]):
-            word_dict[strxx[start,i-1]] += 1
+            key = strxx[start:i-1]
+            if not  key in word_dict.keys():
+                word_dict[key] = 0
+            else:
+                word_dict[key] += 1
+            flag = 0
         i += 1
     return  word_dict
 
 
 
 
-def wordcount():
+def wordcount(strxxx):
     """
     进行词量统计的一个函数
     原理  分词 ---- 组词典 -----sort  ---返回 top5
     :return:
     """
-    pass
+    result = makekeys(strxxx)
+    sorted_result = sorted(result,key = lambda x:result[x],reverse=True)
+    for i in range(5):
+        print(sorted_result[i],result[sorted_result[i]])
 
 
+wordcount(Str)
 
-print(makekeys(Str))
+
