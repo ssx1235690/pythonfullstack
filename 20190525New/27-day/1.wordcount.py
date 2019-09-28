@@ -9,13 +9,32 @@ import re
 
 
 Str = '''
-Beijing ABT Networks Co., Ltd. will be listed on Shanghai Stock Exchange's sci-tech innovation board, commonly known as SSE STAR Market, the China Securities Regulatory Commission (CSRC) said in a statement over the weekend.
-
-It did not specify the total amount of funds to be raised.
-
-The company and its underwriter will confirm the IPO date and publish its prospectus following discussions with the stock exchange.
-
-The SSE STAR Market, inaugurated on June 13 and designed to focus on companies in the high-tech and strategic emerging sectors, will ease the listing criteria, such as allowing firms that have yet to make a profit to list, but they will adopt higher requirements for information disclosure.
+You were my conscience, so silent now you’re like water
+And we started drowning, not like we’d sink any farther.
+But I let my heart go, it’s somewhere down the bottom.
+But I’ll get a new one, come back from the hope that you’ve stolen.
+I’ll stop the whole world, I’ll stop the whole world
+From turning into a monster, and eating us alive
+Don’t you ever wonder how we survive?
+Well now that your gone, the world is ours.
+I’m only human, I’ve got a skeleton in me
+but I’m not the villain, despite what you’re always preaching.
+Call me a traitor, I’m just collecting your victims
+And they’re getting stronger
+I hear them calling.
+I’ll stop the whole world, I’ll stop the whole world
+From turning into a monster, and eating us alive
+Don’t you ever wonder how we survive?
+Well now that your gone, the world is ours.
+Well you thought of straight solutions
+that I liked the attention
+And not always knowing the answers
+You’re gonna lose it
+You’re gonna lose it
+I’ll stop the whole world, I’ll stop the whole world
+From turning into a monster, and eating us alive
+Don’t you ever wonder how we survive?
+Well now that your gone, the world is ours
 '''
 
 word_dict = {}
@@ -30,7 +49,7 @@ def makekeys(strxx):
             flag = 1
             continue
         elif  re.match('\W',strxx[i]) and re.match('\w',strxx[i-1]):
-            key = strxx[start:i-1]
+            key = strxx[start:i]
             if not  key in word_dict.keys():
                 word_dict[key] = 0
             else:
@@ -49,6 +68,7 @@ def wordcount(strxxx):
     :return:
     """
     result = makekeys(strxxx)
+    print(result)
     sorted_result = sorted(result,key = lambda x:result[x],reverse=True)
     for i in range(5):
         print(sorted_result[i],result[sorted_result[i]])
