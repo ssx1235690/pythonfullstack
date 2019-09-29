@@ -63,4 +63,41 @@ print( re.findall( r'(?<=/\*).+?(?=\*/)' , s1 ,re.M|re.S))
 # 正则表达式引擎
 
 
-re.IGNORECASE
+# 匹配ipv4 地址
+
+ip_str = '''
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:db:d2:ec brd ff:ff:ff:ff:ff:ff
+    inet 192.168.137.2/24 brd 192.168.137.255 scope global noprefixroute ens33
+       valid_lft forever preferred_lft forever
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:2f:ce:dc:91 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:2fff:fece:dc91/64 scope link 
+       valid_lft forever preferred_lft forever
+4: br-e8e12e53a0ef: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 02:42:ce:97:26:a5 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.1/16 scope global br-e8e12e53a0ef
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:ceff:fe97:26a5/64 scope link 
+       valid_lft forever preferred_lft forever
+10: veth69c3c07@if9: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-e8e12e53a0ef state UP group default 
+    link/ether c6:62:a5:ef:ed:00 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::c462:a5ff:feef:ed00/64 scope link 
+       valid_lft forever preferred_lft forever
+16: veth1343d63@if15: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-e8e12e53a0ef state UP group default 
+    link/ether 1a:a8:31:cb:ff:93 brd ff:ff:ff:ff:ff:ff link-netnsid 3
+    inet6 fe80::18a8:31ff:fecb:ff93/64 scope link 
+       valid_lft forever preferred_lft forever
+'''
+
+
+ll = re.findall(r'(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d)',ip_str)
+print(ll)
