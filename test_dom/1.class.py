@@ -2,7 +2,7 @@
 # @Time    : 2019/3/29 14:58
 # @Author  : songxy
 # @Email   : ......998@qq.com
-# @File    : 1.class.py
+# @File    : class_1.py
 
 from os import system
 import json
