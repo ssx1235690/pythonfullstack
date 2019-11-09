@@ -4,6 +4,7 @@
 # @Email   : ......998@qq.com
 # @File    : 1.class
 
+
 class Person():
     age = 10
     name = 'tim'
