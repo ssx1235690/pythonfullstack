@@ -5,8 +5,7 @@
 # @File    : 2.practice_class
 
 
-song = [_ for _ in  range(14)]
-# song = (_ for _ in  range(14))
+song = [_ for _ in  range(3)]
 ll = zip(song,song)
 for i in ll:
     print(i)
