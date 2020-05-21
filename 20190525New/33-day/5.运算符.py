@@ -18,3 +18,16 @@ class MyClass:
         return True
 
 print(dir(MyClass()))
+
+
+a = 100
+
+def song():
+    a = 100000
+
+    def song2():
+        nonlocal  a
+        a = 1000
+    song2()
+song()
+print(dir(song))
