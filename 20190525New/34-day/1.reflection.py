@@ -50,6 +50,10 @@ class  Point():
         print('setattr',key,value)
         # self.key = value 会引起递归循环
         self.__dict__[key] = value
+        # pass return NONE
+
+
+
 p = Point(4,5)
 print(1,p)
 print(2,p.x,p.y)
@@ -65,3 +69,27 @@ p.__dict__['yy']  = 1000
 print(p.zz)
 p.zz = 100000
 print(p.zz)
+
+
+
+### getatribute()---instance dict ----- class dict --- 父类 dict ---- getattr（）
+
+
+class  Point():
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+    def __getattr__(self, item):
+        print(4,item,'------------------------------')
+        print(5,type(item),'~~~~~~~~~~~~~~~~~~~~~')
+        return 123456
+    def __setattr__(self, key, value):
+        print('setattr',key,value)
+        # self.key = value 会引起递归循环
+        print(type(self),self.__dict__,'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz')
+        self.__dict__[key] = value
+        # pass return NONE
+    def __getattribute__(self, item):
+        return {}
+
+song = Point('zz','yy')
